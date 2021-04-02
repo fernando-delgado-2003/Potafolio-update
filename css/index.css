@@ -37,7 +37,6 @@ header {
 header .container-logo {
   position: relative;
   transition: all 500ms linear;
-  padding: 0 1.5rem;
   border: 1px solid rgb(218, 220, 224, 0.5);
   border-radius: 0.3rem;
 }
@@ -61,6 +60,8 @@ header .container-logo:hover {
 header .container-logo a {
   display: block;
   height: 100%;
+  width: 100%;
+  padding: 0 1.5rem;
 }
 header a {
   color: #fff;
@@ -76,6 +77,22 @@ header nav ul {
   display: flex;
   justify-content: space-evenly;
   list-style: none;
+}
+header nav ul li{
+    position: relative;
+}
+header nav ul li::before{
+    position: absolute;
+    content: " ";
+    bottom: -2px;
+    left: 5%;
+    width: 0%;
+    height: 2px;
+    background-color: var(--global-color-red);
+    transition: all 400ms linear;
+}
+header nav ul li:hover::before{
+    width: 90%;
 }
 .hero {
   display: flex;
