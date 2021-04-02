@@ -48,7 +48,7 @@
         font-weight: 600;
         -webkit-text-stroke-width: 1px;
         -webkit-text-stroke-color: #000;
-        color: transparent !important;
+        color: transparent ;
         transition: all 1s ;
 }
 
