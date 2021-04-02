@@ -10,4 +10,4 @@ setTimeout(()=>{
         leftAndRight.style.display="none";
     })
     containerLoader.classList.add("active")
-}, 4600)
+}, 4500)
