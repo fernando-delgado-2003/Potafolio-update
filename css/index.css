@@ -1,473 +1,3 @@
-<<<<<<< HEAD
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap");
-
-:root {
-  --global-color-red: #de3315;
-}
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-a {
-  text-decoration: none;
-  outline: none;
-}
-body {
-  font-family: "Quicksand", sans-serif;
-  background-color: #000;
-  color: #fff;
-  font-weight: 700;
-}
-
-.title-section {
-  text-align: center;
-  font-size: 2.5rem;
-}
-.title-sub-section {
-  font-size: 2rem;
-}
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 6rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 2rem;
-  transition: all 500ms;
-  z-index: 100;
-}
-header.active {
-  height: 3.5rem;
-  background-color: #000;
-}
-header .container-logo {
-  position: relative;
-  transition: all 500ms linear;
-  border: 1px solid rgb(218, 220, 224, 0.5);
-  border-radius: 0.3rem;
-}
-header .container-logo::before {
-  position: absolute;
-  content: " ";
-  top: 0;
-  left: 0;
-  width: 0%;
-  height: 100%;
-  background-color: var(--global-color-red);
-  transition: all 500ms linear;
-  z-index: -1;
-}
-header .container-logo:hover::before {
-  width: 100%;
-}
-header .container-logo:hover {
-  border: 1px solid var(--global-color-red);
-}
-header .container-logo a {
-  display: block;
-  height: 100%;
-  width: 100%;
-  padding: 0 1.5rem;
-}
-header a {
-  color: #fff;
-  font-size: 1.1rem;
-}
-header .name {
-  font-size: 2rem;
-}
-header nav {
-  width: 40%;
-}
-header nav ul {
-  display: flex;
-  justify-content: space-evenly;
-  list-style: none;
-}
-header nav ul li {
-  position: relative;
-}
-header nav ul li::before {
-  position: absolute;
-  content: " ";
-  bottom: -2px;
-  left: 5%;
-  width: 0%;
-  height: 2px;
-  background-color: var(--global-color-red);
-  transition: all 400ms linear;
-}
-header nav ul li:hover::before {
-  width: 90%;
-}
-.hero {
-  display: flex;
-  width: 100%;
-  height: 100vh;
-  flex-direction: column;
-  justify-content: center;
-  /* justify-content: space-between; */
-  padding: 0 5%;
-  background-image: url(/img/hero.jpg);
-  background-size: cover;
-  background-repeat: none;
-  background-position: center;
-}
-.hero .text-hero {
-  width: 50%;
-  text-align: center;
-}
-.hero .text-hero p:nth-child(2) {
-  font-size: 1.3rem;
-}
-.hero .text-hero .title-hero {
-  font-size: 3rem;
-}
-/* .hero .text-hero {
-    width: 35%;
-  } */
-.hero .text-hero .container-buttons {
-  margin-top: 1rem;
-  display: flex;
-  justify-content: center;
-}
-.hero .text-hero .container-buttons div {
-  position: relative;
-  transition: all 500ms linear;
-  border-radius: .2rem;
-}
-.hero .text-hero .container-buttons div:nth-child(1){
-  margin-right: 2rem;
-}
-.hero .text-hero .container-buttons div::before {
-  position: absolute;
-  content: " ";
-  top: -4px;
-  left: 0;
-  width: 0%;
-  height: 127%;
-  background-color: #fff;
-  transition: all 500ms linear;
-  border-radius: .2rem;
-}
-.hero .text-hero .container-buttons div:hover::before {
-  width: 100%;
-}
-.hero .text-hero .container-buttons div a {
-  border: 1px solid rgb(218, 220, 224, 0.8);
-  color: #fff;
-  padding: .2rem 1rem;
-  border-radius: 0.2rem;
-  position: relative;
-  overflow: hidden;
-  font-size: 1.3rem;
-}
-.hero .text-hero .container-buttons div:hover a{
-  color: var(--global-color-red);
-}
-/* .hero .text-hero .container-buttons a span {
-  position: absolute;
-  width: 0px;
-  height: 0px;
-  background: #fff;
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  animation: animate-btn-hero 800ms linear infinite;
-} */
-@keyframes animate-btn-hero {
-  from {
-    width: 0px;
-    height: 0px;
-    opacity: 0.5;
-  }
-  to {
-    width: 200px;
-    height: 200px;
-    opacity: 0;
-  }
-}
-*/
-/* .hero .img-hero {
-  width: 45%;
-}
-.hero .img-hero img {
-  width: 100%;
-}
-
-.hero .text-hero,
-.hero .img-hero {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-}
-/*******/
-.bx {
-  font-size: 2rem;
-}
-.bxl-html5 {
-  color: #eb860e;
-}
-.bxl-css3 {
-  color: #2c99ef;
-}
-.bxl-javascript {
-  color: #dce215;
-}
-.bxl-wordpress {
-  color: #2c99ef;
-}
-.container-skills {
-  background-color: #fff;
-  padding: 5rem 3rem;
-  color: #000;
-  clip-path: polygon(0 0%, 100% 0%, 100% 90%, 0% 100%);
-}
-.container-skills > h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-.container-skills .skill {
-  padding-left: 3.2rem;
-  position: relative;
-  margin-bottom: 1rem;
-}
-/**  LOGOS DE LAS SKILLS  *****************************/
-.container-skills .skill .skill-logo {
-  width: 2.5rem;
-  height: 2.5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #a0a0a03d;
-  border-radius: 50%;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-.container-skills .skill .skill-logo i {
-  font-size: 1.9rem;
-}
-.container-skills .skill .skill-logo img {
-  width: 1.9rem;
-}
-.container-skills .skill > h3 {
-  font-size: 1.3rem;
-  font-weight: 600;
-}
-.container-skills .skill > p {
-  font-size: 0.9rem;
-  color: rgba(0, 0, 0, 0.69);
-  margin-bottom: 1.7rem;
-  font-weight: 500;
-}
-
-/** BARRA BLANCLA DE SKILLS ***/
-.container-skills .skill .container-skill-level {
-  width: 400px;
-  height: 0.4rem;
-  background-color: rgba(255, 255, 255, 0.449);
-  border-radius: 0.4rem;
-  margin-top: 0.4rem;
-  position: relative;
-}
-/**  BARRA AZUL DE SKILLS  *****************************/
-.container-skills .skill .container-skill-level .skill-level {
-  height: 100%;
-  background: rgb(255, 38, 0);
-  background: linear-gradient(
-    86deg,
-    rgba(255, 140, 120, 1) 1%,
-    rgba(255, 37, 0, 1) 100%
-  );
-  border-radius: 0.4rem;
-}
-
-.container-skills .skill .container-skill-level .skill-level-html {
-  width: 60%;
-}
-.container-skills .skill .container-skill-level .skill-level-css {
-  width: 60%;
-}
-.container-skills .skill .container-skill-level .skill-level-javascript {
-  width: 55%;
-}
-.container-skills .skill .container-skill-level .skill-level-webpack {
-  width: 40%;
-}
-.container-skills .skill .container-skill-level .skill-level-wordpress {
-  width: 40%;
-}
-/**  ANIMACIONES DE LAS ANIMACIONES DEL NIVEL  *****************************/
-@keyframes level-html {
-  from {
-    width: 0%;
-  }
-  to {
-    width: 60%;
-  }
-}
-@keyframes level-css {
-  from {
-    width: 0%;
-  }
-  to {
-    width: 60%;
-  }
-}
-@keyframes level-javascript {
-  from {
-    width: 0%;
-  }
-  to {
-    width: 55%;
-  }
-}
-@keyframes level-webpack {
-  from {
-    width: 0%;
-  }
-  to {
-    width: 40%;
-  }
-}
-@keyframes level-wordpress {
-  from {
-    width: 0%;
-  }
-  to {
-    width: 40%;
-  }
-}
-.container-skills .skill .container-skill-level .level-percentage {
-  position: absolute;
-  top: -24px;
-  background-color: var(--global-color-red);
-  font-size: 0.6rem;
-  padding: 0.1rem 0.5rem;
-  color: #fff;
-}
-.container-skills .skill .container-skill-level .level-percentage::before {
-  content: "";
-  display: block;
-  border-bottom: 6px solid transparent;
-  border-top: 6px solid var(--global-color-red);
-  border-left: 6px solid transparent;
-  border-right: 6px solid transparent;
-  position: absolute;
-  bottom: -12px;
-  right: 0;
-}
-.container-skills .skill .container-skill-level .level-percentage-html {
-  left: calc(60% - 33.65px);
-}
-.container-skills .skill .container-skill-level .level-percentage-css {
-  left: calc(60% - 33.65px);
-}
-.container-skills .skill .container-skill-level .level-percentage-javascript {
-  left: calc(55% - 33.65px);
-}
-.container-skills .skill .container-skill-level .level-percentage-webpack {
-  left: calc(40% - 33.65px);
-}
-.container-skills .skill .container-skill-level .level-percentage-wordpress {
-  left: calc(40% - 33.65px);
-}
-/**  ANIMACIONES DE LAS TOOLTIPS  *****************************/
-@keyframes level-percentage-html {
-  from {
-    left: 0;
-  }
-  to {
-    left: calc(60% - 33.65px);
-  }
-}
-@keyframes level-percentage-css {
-  from {
-    left: 0;
-  }
-  to {
-    left: calc(60% - 33.65px);
-  }
-}
-@keyframes level-percentage-javascript {
-  from {
-    left: 0;
-  }
-  to {
-    left: calc(55% - 33.65px);
-  }
-}
-@keyframes level-percentage-webpack {
-  from {
-    left: 0;
-  }
-  to {
-    left: calc(40% - 33.65px);
-  }
-}
-@keyframes level-percentage-wordpress {
-  from {
-    left: 0;
-  }
-  to {
-    left: calc(40% - 33.65px);
-  }
-}
-.container-skills .skill:nth-child(3) > p {
-  margin-bottom: 1.7rem;
-}
-.portfolio {
-  width: 80%;
-  margin: 0 auto;
-}
-.portfolio .container {
-  display: flex;
-  flex-wrap: wrap;
-}
-.portfolio .container .item {
-  width: calc(100% / 3 - 30px);
-  height: 400px;
-  margin: 20px 15px;
-  overflow: hidden;
-  border-radius: 0.5rem;
-  position: relative;
-}
-.portfolio .container .item .cont-img {
-  overflow: hidden;
-  border-radius: 0.5rem;
-}
-.portfolio .container .item .cont-img img {
-  width: 100%;
-}
-
-.portfolio .container .item .description {
-  position: absolute;
-  bottom: -100%;
-  background-color: #fff;
-  width: 100%;
-  color: #000;
-  text-align: center;
-  overflow: hidden;
-  border-radius: 0.3rem;
-}
-.portfolio .container .item .cont-img:hover .description {
-  transition: all 2s;
-  bottom: 0;
-}
-.portfolio .container .item .description ul {
-  text-align: left;
-}
-.portfolio .container .item .description ul li {
-  display: flex;
-  align-items: center;
-}
-=======
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap");
 
@@ -576,44 +106,68 @@ header nav ul li:hover::before{
 }
 .hero {
   display: flex;
+  width: 100%;
+  height: 100vh;
   flex-direction: column;
   justify-content: center;
   /* justify-content: space-between; */
   padding: 0 5%;
-  height: 100vh;
   background-image: url(/img/hero.jpg);
   background-size: cover;
   background-repeat: none;
   background-position: center;
 }
-.hero .text-hero{
+.hero .text-hero {
   width: 50%;
   text-align: center;
 }
-.hero .text-hero p:nth-child(2){
+.hero .text-hero p:nth-child(2) {
   font-size: 1.3rem;
 }
-.hero .text-hero .title-hero{
+.hero .text-hero .title-hero {
   font-size: 3rem;
 }
-  /* .hero .text-hero {
-    width: 35%;
-  } */
+
 .hero .text-hero .container-buttons {
   margin-top: 1rem;
+  display: flex;
+  justify-content: center;
 }
-/* .hero .text-hero .container-buttons a {
-  display: inline-block;
-  margin: 0 1rem;
-  padding: 0.2rem 0.5rem;
-  border: 1px solid #fff;
+.hero .text-hero .container-buttons div {
+  position: relative;
+  transition: all 500ms linear;
+  border-radius: .2rem;
+}
+.hero .text-hero .container-buttons div:nth-child(1){
+  margin-right: 2rem;
+}
+.hero .text-hero .container-buttons div::before {
+  position: absolute;
+  content: " ";
+  top: -4px;
+  left: 0;
+  width: 0%;
+  height: 127%;
+  background-color: #fff;
+  transition: all 500ms linear;
+  border-radius: .2rem;
+}
+.hero .text-hero .container-buttons div:hover::before {
+  width: 100%;
+}
+.hero .text-hero .container-buttons div a {
+  border: 1px solid rgb(218, 220, 224, 0.8);
   color: #fff;
+  padding: .2rem 1rem;
   border-radius: 0.2rem;
   position: relative;
   overflow: hidden;
   font-size: 1.3rem;
 }
-.hero .text-hero .container-buttons a span {
+.hero .text-hero .container-buttons div:hover a{
+  color: var(--global-color-red);
+}
+/* .hero .text-hero .container-buttons a span {
   position: absolute;
   width: 0px;
   height: 0px;
@@ -621,7 +175,7 @@ header nav ul li:hover::before{
   border-radius: 50%;
   transform: translate(-50%, -50%);
   animation: animate-btn-hero 800ms linear infinite;
-}
+} */
 @keyframes animate-btn-hero {
   from {
     width: 0px;
@@ -633,26 +187,6 @@ header nav ul li:hover::before{
     height: 200px;
     opacity: 0;
   }
-} */
-/* .hero .img-hero {
-  width: 45%;
-}
-.hero .img-hero img {
-  width: 100%;
-}
-
-.hero .text-hero,
-.hero .img-hero {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-} */
-/*******/
-#habilidades {
-  width: 90%;
-  color: #fff;
-  margin: 0 auto;
 }
 .bx {
   font-size: 2rem;
@@ -681,6 +215,7 @@ header nav ul li:hover::before{
   position: relative;
   margin-bottom: 1rem;
 }
+
 /**  LOGOS DE LAS SKILLS  *****************************/
 .container-skills .skill .skill-logo {
   width: 2.5rem;
@@ -909,4 +444,3 @@ header nav ul li:hover::before{
   display: flex;
   align-items: center;
 }
->>>>>>> 2fe95ba559bc7bd6de71e567af8b9dafed51db19
