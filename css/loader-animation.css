@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .container{
     position: relative;
 }
@@ -129,4 +130,137 @@
     to{
         opacity: 0;
     }
+=======
+.container{
+    position: relative;
+}
+.container-loader .left.active,
+.container-loader .right.active{
+    display: none;
+}
+.container-loader{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    z-index: 100;
+    transition: all 500ms;
+    font-family: 'Poppins', sans-serif;
+}
+.container-loader.active{
+    display: none;
+}
+.container-loader .right{
+    position: absolute;
+    width: 50%;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    background-color: #fff;
+    animation: animation-left-and-right 1s 3.5s linear;
+}
+.container-loader .left{
+    position: absolute;
+    width: 50%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    animation: animation-left-and-right 1s 3.5s linear;
+}
+
+.container-loader > .text-1 {
+        text-transform: uppercase;
+        letter-spacing: 10px;
+        position: relative;
+        z-index: 10;        overflow: hidden;
+        font-size: 2.3rem;
+        font-weight: 600;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: #000;
+        color: transparent ;
+        transition: all 1s ;
+}
+
+.container-loader .text-2{
+        color: #000;
+        position: absolute;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        animation: animation-translate-x 2s linear;
+} 
+.line{
+    position: absolute;
+    top: 55%;
+    left: 5;
+    width: 90%;
+    height: 1px;
+    background-color: #000;
+    z-index: 10;
+    animation: animation-scale 3s linear;
+    transition: all 1s ;
+}
+.line.active{
+    opacity: 0;
+}
+.text-1.active {
+    transform: translateY(-20px);
+    opacity: 0;
+}
+@keyframes animation-translate-x{
+    from{
+        width: 0%;
+    }
+    to{
+        width: 100%;
+    }
+}
+@keyframes animation-scale{
+    0%{
+        transform: scale(0);
+        background-color: red;
+    }
+    50%{
+        transform: scale(.5);
+        background-color: red;
+    }
+    75%{
+        transform: scale(0.5);
+    }
+    80%{
+        transform: scale(.5);
+        background-color: #000;
+    }
+    100%{
+        transform: scale(1);
+        background-color: #000;
+    }
+}
+@keyframes animation-left-and-right{
+0%{
+    width: 50%;
+}
+50%{
+    width: 25%;
+}
+90%{
+    width: 0%;
+}
+
+100%{
+    width: 0%;
+}
+}
+@keyframes animation-opacity {
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+>>>>>>> 2fe95ba559bc7bd6de71e567af8b9dafed51db19
 }
