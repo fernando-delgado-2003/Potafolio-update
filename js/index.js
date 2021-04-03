@@ -3,6 +3,17 @@ let header = d.querySelector("header");
 let windowHeight = window.innerHeight / 3;
 let SectionSkill = d.querySelector("#skills").getBoundingClientRect().top;
 let aboutMe = d.querySelector("#aboutMe").getBoundingClientRect().top;
+const menu = d.querySelector(".menu-hamburger");
+
+/**
+ * Menu
+ */
+menu.addEventListener("click", ()=>{
+    const nav = d.querySelector("nav");
+    nav.classList.toggle("active")
+})
+
+
 /**
  * Por si el usuario recarga la pagina en la seccion de about me el texto y la imagen esten
  */

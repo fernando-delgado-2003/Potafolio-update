@@ -1,0 +1,52 @@
+@media (max-width: 1108px){
+    header nav ul li {
+        margin-right: 1rem;
+    }
+    .portfolio {
+        width: 90%;
+    }
+    header nav {
+        width: auto;
+    }
+    .portfolio .container .item .description ul li {
+        font-size: .8rem;
+    }
+}
+
+@media (max-width: 870px){
+    header .menu-hamburger{
+        display: flex;
+    }
+    header nav {
+        position: fixed;
+        top: 0;
+        left: 100%;
+        width: 70%;
+        height: 100vh;
+        background-color: #000;
+        z-index: -1;
+        padding-top: 3rem;
+        overflow: hidden;
+        transition: all 800ms linear;
+      }
+      header nav ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 100%;
+      }
+      header nav ul li::before{
+          height: 3px;
+      }
+      header nav ul li a{
+          font-size: 2rem;
+      }
+    .hero .text-hero .title-hero {
+        font-size: 2.3rem;
+    }
+    .hero .text-hero p:nth-child(2) {
+        font-size: 1.1rem;
+    }
+    
+}
