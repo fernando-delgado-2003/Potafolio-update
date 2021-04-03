@@ -27,23 +27,27 @@
 
 
     <header>
-      <div class="container-logo">
+      <div class="button">
         <a href="/" class="name">FDB</a>
       </div>
 
       <nav>
         <ul>
           <li>
-            <a href="">Inicio</a>
+            <a href="#">Inicio</a>
           </li>
           <li>
-            <a href="">Skils</a>
+            <a href="#skills">Skils</a>
           </li>
           <li>
-            <a href="">Proyectos</a>
+            <a href="#portfolio">Portafolio</a>
+          </li>
+
+          <li>
+            <a href="#aboutMe">Acerca de</a>
           </li>
           <li>
-            <a href="">Contacto</a>
+            <a href="#contact">Contacto</a>
           </li>
         </ul>
       </nav>
@@ -54,10 +58,10 @@
         <p>Me llamo Fernando soy desarrollador font end jr</p>
         <div class="container-buttons">
           <div>
-          <a href="#about-me" class="animation-btn">Sobre mi</a>            
+            <a href="#about-me" class="animation-btn">Sobre mi</a>
           </div>
           <div>
-          <a href="#portfolio" class="animation-btn">Portafolio</a>            
+            <a href="#portfolio" class="animation-btn">Portafolio</a>
           </div>
 
         </div>
@@ -141,7 +145,7 @@
           </div>
         </div>
       </section>
-      <section class="portfolio">
+      <section class="portfolio" id="portfolio">
         <h2 class="title-section">Portafolio</h2>
         <div class="container">
           <div class="item">
@@ -156,7 +160,11 @@
                 <li><i class="bx bxl-css3"></i>CSS</li>
                 <li><i class="bx bxl-javascript"></i>JAVASCRIPT</li>
               </ul>
-              <a href="https://elpocito.netlify.app/">Ver demo</a>
+              <p class="text">El pocito es un demo que hice para un restaurante. </p>
+              <div class="button">
+                <a href="https://elpocito.netlify.app/" target="_blank">Ver demo</a>
+              </div>
+
             </div>
           </div>
           <div class="item">
@@ -171,7 +179,11 @@
                 <li><i class="bx bxl-css3"></i>CSS</li>
                 <li><i class="bx bxl-javascript"></i>JAVASCRIPT</li>
               </ul>
-              <a href="https://landing-page-fernando.netlify.app/">Ver demo</a>
+              <p class="text">INSURE es un la landing page </p>
+              <div class="button">
+                <a href="https://landing-page-fernando.netlify.app/" target="_blank">Ver demo</a>
+              </div>
+
             </div>
           </div>
           <div class="item">
@@ -185,7 +197,11 @@
                 <li><i class="bx bxl-html5"></i>HTML</li>
                 <li><i class="bx bxl-css3"></i>CSS</li>
               </ul>
-              <a href="https://my-gallery-fernando-delgado.netlify.app/">Ver demo</a>
+              <p class="text">My gallery es una pequeña galería estática </p>
+              <div class="button">
+                <a href="https://my-gallery-fernando-delgado.netlify.app/" target="_blank">Ver demo</a>
+              </div>
+
             </div>
           </div>
           <div class="item">
@@ -200,7 +216,12 @@
                 <li><i class="bx bxl-css3"></i>CSS</li>
                 <li><i class="bx bxl-javascript"></i>JAVASCRIPT</li>
               </ul>
-              <a href="https://weather-clima2.000webhostapp.com/">Ver demo</a>
+              <p class="text">App del clima es una página web donde puedes consultar el clima de tu país, los datos
+                mostrados vienen de la API de openWeatherMap. </p>
+              <div class="button">
+                <a href="https://weather-clima2.000webhostapp.com/" target="_blank">Ver demo</a>
+              </div>
+
             </div>
           </div>
           <div class="item">
@@ -214,11 +235,64 @@
                 <li><i class="bx bxl-html5"></i>HTML</li>
                 <li><i class="bx bxl-css3"></i>CSS</li>
                 <li><i class="bx bxl-javascript"></i>JAVASCRIPT</li>
-                <a href="https://windbnb-fernando-delgado.netlify.app/">Ver demo</a>
+
               </ul>
+              <p class="text">Windbnb es un pequeño clon de Airbnb </p>
+              <div class="button">
+                <a href="https://windbnb-fernando-delgado.netlify.app/" target="_blank">Ver demo</a>
+              </div>
+
             </div>
           </div>
         </div>
+      </section>
+      <section id="aboutMe" class="acerca-de">
+        <div class="acerca-de_heading">
+          <h2>¿Quien soy?</h2>
+        </div>
+        <div class="acerca-de_container-text">
+          <div class="acerca-de_text">
+            <span>Acerca de mi</span>
+            <p>
+              Me presento me llamo Fernando soy de México, nací y vivo en Cancún, Quintana Roo.
+              Actualmente tengo 17 años llevó 1 año y medio de estudios de forma autodidacta
+              para ser un buen desarrollador Front-end.
+              Soy un apasionado de las tecnologias webs y la web en general y lo que más me gusta de esto
+              que siempre al algo nuevo que aprender.
+            </p>
+            <br>
+            <q>Nunca paraces de aprender</q>
+            <a href="./download/cv-desktop.docx" download="cv-fernando.docx" class="cv-desktop">Descargar
+              cv</a>
+            <a href="./download/cv-mobile.docx" download="cv-fernando.docx" class="cv-mobile">Descargar
+              cv</a>
+          </div>
+
+          <div class="acerca-de_img">
+            <img loading="lazy" src="./img/undraw_web_developer_p3e5.svg" alt="">
+          </div>
+
+        </div>
+      </section>
+      <section id="contact" class="contact">
+        <h2>Contactos</h2>
+        <ul>
+          <li>
+            <i class='bx bxs-phone'></i>
+            <a href="tel:529982184312">Numeró de telefono: +52 (998) 218 4312</a>
+          </li>
+          <li>
+            <i class='bx bx-mail-send'></i>
+            <a href="mailto:fernanbravo124@gmail.com ">Gmail: fernanbravo124@gmail.com</a>
+          </li>
+          <li>
+
+            <a href="https://www.linkedin.com/in/fernando-delgado-bravo-2bb0a51b0/" ctarget="_BLANCK">
+
+              <i class='bx bxl-linkedin-square'></i>Linkedin</a>
+
+          </li>
+        </ul>
       </section>
     </main>
   </div>

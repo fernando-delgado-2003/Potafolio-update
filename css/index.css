@@ -13,6 +13,9 @@ a {
   text-decoration: none;
   outline: none;
 }
+html{
+  scroll-behavior: smooth;
+}
 body {
   font-family: "Quicksand", sans-serif;
   background-color: #000;
@@ -24,6 +27,7 @@ body {
   text-align: center;
   font-size: 2.5rem;
 }
+
 .title-sub-section {
   font-size: 2rem;
 }
@@ -44,13 +48,13 @@ header.active{
   height: 3.5rem;
   background-color: #000;
 }
-header .container-logo {
+.button {
   position: relative;
   transition: all 500ms linear;
   border: 1px solid rgb(218, 220, 224, 0.5);
   border-radius: 0.3rem;
 }
-header .container-logo::before {
+ .button::before {
   position: absolute;
   content: " ";
   top: 0;
@@ -61,13 +65,13 @@ header .container-logo::before {
   transition: all 500ms linear;
   z-index: -1;
 }
-header .container-logo:hover::before {
+ .button:hover::before {
   width: 100%;
 }
-header .container-logo:hover {
+ .button:hover {
   border: 1px solid var(--global-color-red);
 }
-header .container-logo a {
+ .button a {
   display: block;
   height: 100%;
   width: 100%;
@@ -204,7 +208,7 @@ header nav ul li:hover::before{
   color: #2c99ef;
 }
 .container-skills {
-  padding: 0 3rem;
+  padding: 3.5rem;
 }
 .container-skills > h2 {
   font-size: 2rem;
@@ -355,6 +359,7 @@ header nav ul li:hover::before{
 .container-skills .skill .container-skill-level .level-percentage-wordpress {
   left: calc(40% - 33.65px);
 }
+
 /**  ANIMACIONES DE LAS TOOLTIPS  *****************************/
 @keyframes level-percentage-html {
   from {
@@ -402,6 +407,7 @@ header nav ul li:hover::before{
 .portfolio {
   width: 80%;
   margin: 0 auto;
+  padding: 3.5rem 0;
 }
 .portfolio .container {
   display: flex;
@@ -415,6 +421,11 @@ header nav ul li:hover::before{
   border-radius: 0.5rem;
   position: relative;
 }
+.portfolio .container .item > p{
+  text-align: center;
+  margin: .3rem 0;
+  font-size: 1.3rem;
+}
 .portfolio .container .item .cont-img {
   overflow: hidden;
   border-radius: 0.5rem;
@@ -425,22 +436,156 @@ header nav ul li:hover::before{
 
 .portfolio .container .item .description {
   position: absolute;
-  bottom: -100%;
+  bottom: -330px;
   background-color: #fff;
   width: 100%;
+  height: 330px;
   color: #000;
   text-align: center;
   overflow: hidden;
-  border-radius: 0.3rem;
+  border-radius: 0.8rem;
+  transition: all 1s;
 }
-.portfolio .container .item .cont-img:hover .description {
-  transition: all 2s;
+.portfolio .container .item:hover .description {
+
   bottom: 0;
 }
+.portfolio .container .item .description > .text{
+  font-weight: 500;
+}
 .portfolio .container .item .description ul {
-  text-align: left;
+  display: flex;
+  margin: 1.5rem 0;
 }
 .portfolio .container .item .description ul li {
   display: flex;
   align-items: center;
+  flex-direction: column;
+  width: calc(100% / 3);
 }
+.portfolio .container .item .description > div{
+  position: absolute;
+  bottom: 30px;
+  transition: all 500ms linear;
+  font-size: 1.3rem;
+  max-width: 131.517px;
+  min-width: 131.517px;
+  left: calc(50% - 64.7585px);
+  border-color: rgb(71, 71, 71);
+}
+
+.portfolio .container .item .description > div a{
+  padding: 0 1rem;
+  color: #000;
+}
+.portfolio .container .item .description > div::before{
+  z-index: 0;
+}
+.portfolio .container .item .description > div:hover{
+  border-color: var(--global-color-red);
+}
+.portfolio .container .item .description > div:hover a{
+  position: relative;
+  color: #fff;
+}
+.acerca-de{
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 5rem;
+}
+.acerca-de .acerca-de_heading h2{
+  text-align: center;
+  color: #fff;
+  font-size: 2rem;
+}
+.acerca-de .acerca-de_container-text{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  overflow: hidden;
+}
+
+.acerca-de .acerca-de_container-text .acerca-de_text{
+  width: 50%;
+  opacity: 0;
+  transform: translateX(-100%);
+}
+.acerca-de .acerca-de_container-text .acerca-de_text > a{
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 7.5rem;
+  height: 2.5rem;
+  background-color: #2c99ef;
+  border-radius: .3rem;
+  margin-top: 1rem;
+  transition: all 500ms;
+
+}
+.acerca-de .acerca-de_container-text .acerca-de_text > a:hover{
+background-color: #58aeff;
+}
+.acerca-de .acerca-de_container-text .acerca-de_text .cv-mobile{
+  display: none;
+}
+/**  ANIMACION DEL TEXTO DE LA SECCION ACERCA DE MI   *****************************/
+.acerca-de .acerca-de_container-text .acerca-de_text.active{
+  transition: 1.5s;
+  opacity: 1;
+  transform: translateX(0);    
+}
+.acerca-de .acerca-de_container-text .acerca-de_text span{
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: .5rem;
+}
+
+.acerca-de .acerca-de_container-text .acerca-de_img{
+  width: 40%;
+  opacity:0;
+  transform: translateX(100%);
+}
+/**   ANIMACION DE LA IMAGEN DE LA SECCION ACERCA DE MI   *****************************/
+.acerca-de .acerca-de_container-text .acerca-de_img.active{
+  transition: 1.5s;
+  opacity: 1;
+  transform: translateX(0);
+}
+.acerca-de .acerca-de_container-text .acerca-de_img img{
+  width: 100%;
+}
+/**  CONTACTO  *****************************/
+.contact{
+  padding-top: 5rem;
+}
+.contact > h2{
+  text-align: center;
+  font-size: 2rem;
+  color: #fff;
+}
+.contact ul li{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 1rem;
+  margin-top: .7rem;
+}
+.contact ul li a{
+  color: #fff;
+  margin-left: .2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact ul li i{
+  font-size: 1.8rem;
+  margin-right: .4rem;
+}
+.contact ul li img{
+  width: 1.8rem;
+  margin-right: .4rem;
+}
+/* If you are looking to convert your PSD, PNG , JPG or PDF file  */
