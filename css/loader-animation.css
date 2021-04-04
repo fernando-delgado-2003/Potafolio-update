@@ -22,21 +22,21 @@
 }
 .container-loader .right{
     position: absolute;
-    width: 50%;
+    width: 0;
     height: 100vh;
     top: 0;
     right: 0;
     background-color: #fff;
-    animation: animation-left-and-right 1s 3.5s linear;
+    animation: animation-left-and-right 4.5s linear;
 }
 .container-loader .left{
     position: absolute;
-    width: 50%;
+    width: 0;
     height: 100vh;
     top: 0;
     left: 0;
     background-color: #fff;
-    animation: animation-left-and-right 1s 3.5s linear;
+    animation: animation-left-and-right 4.5s linear;
 }
 
 .container-loader > .text-1 {
@@ -112,13 +112,9 @@
 0%{
     width: 50%;
 }
-50%{
-    width: 25%;
+75%{
+    width: 50%;
 }
-90%{
-    width: 0%;
-}
-
 100%{
     width: 0%;
 }
