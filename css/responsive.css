@@ -108,6 +108,10 @@
     .container-skills .skill .container-skill-level {
         width: 200px;
     }
+    .portfolio .container .item {
+        width: 90%;
+        margin: 2rem auto;
+    }
 }
 @media (max-width: 324px){
     .hero .text-hero .container-buttons {
@@ -115,5 +119,8 @@
     }
     .hero .text-hero .container-buttons div {
         margin: 1rem 0 0 0;
+    }
+    .hero .text-hero .container-buttons div:nth-child(1) {
+        margin-right: 0;
     }
 }
