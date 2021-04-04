@@ -4,14 +4,20 @@ let windowHeight = window.innerHeight / 3;
 let SectionSkill = d.querySelector("#skills").getBoundingClientRect().top;
 let aboutMe = d.querySelector("#aboutMe").getBoundingClientRect().top;
 const menu = d.querySelector(".menu-hamburger");
-
+let links = d.querySelectorAll("nav a")
 /**
  * Menu
  */
 menu.addEventListener("click", ()=>{
     const nav = d.querySelector("nav");
     nav.classList.toggle("active")
+    links.forEach((link)=>{
+      link.addEventListener("click", ()=>{
+        nav.classList.remove("active")
+      })
+    })
 })
+
 
 
 /**
@@ -35,7 +41,6 @@ window.addEventListener("scroll", () => {
   let aboutMe = d.querySelector("#aboutMe").getBoundingClientRect().top;
 
   header.classList.toggle("active", window.scrollY > 0);
-  console.log(window.scrollY);
   if (SectionSkill <= windowHeight) {
       animationSkills()
   }
@@ -45,7 +50,7 @@ window.addEventListener("scroll", () => {
 });
 
 
-function animationSkills(params) {
+function animationSkills() {
       /**barra del nivel */
       const lineHhtml = d.querySelector(".skill-level-html");
       const lineCss = d.querySelector(".skill-level-css");
@@ -74,11 +79,10 @@ function animationSkills(params) {
 
       lineWordpress.style.animation = "level-webpack 1.5s";
       toolTipWordpress.style.animation = "level-percentage-webpack 1.5s";
-    
-
-    /**Seccion acerca de mi */
   }
-  function animationAboutMe(params) {
+
+  /**Seccion About me */
+  function animationAboutMe() {
 
       let aboutMeText = d.querySelector(".acerca-de_text");
       let aboutMeImg = d.querySelector(".acerca-de_img");
@@ -86,26 +90,3 @@ function animationSkills(params) {
       aboutMeImg.classList.add("active");
     
   }
-
-
-
-
-
-// const animationBtns = d.querySelectorAll(".animation-btn");
-
-// animationBtns.forEach((btn)=>{
-//     btn.addEventListener("click", (e)=>{
-//         let x = e.clientX - e.target.offsetLeft;
-//         let y = e.clientY - e.target.offsetTop;
-
-//         let span = d.createElement("span");
-//          span.style.left = `${x}px`;
-//          span.style.top = `${y}px`;
-
-//          btn.appendChild(span)
-
-//          setTimeout(()=>{
-//              span.remove()
-//          }, 800);
-//     })
-// })
