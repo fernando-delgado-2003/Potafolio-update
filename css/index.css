@@ -118,6 +118,7 @@ header .menu-hamburger {
   align-content: center;
   flex-direction: column;
   cursor: pointer;
+  overflow: hidden;
 }
 header .menu-hamburger .line-menu{
   width: 100%;
@@ -125,6 +126,16 @@ header .menu-hamburger .line-menu{
   background-color: #fff;
 
 }
+header .menu-hamburger .line1.active{
+
+}
+header .menu-hamburger .line2.active{
+  transform: translateX(-30px);
+}
+header .menu-hamburger .line3.active{
+
+}
+
 header nav.active {
   left: 30%;
 }
@@ -544,13 +555,17 @@ header nav ul li:hover::before{
   font-size: 1.5rem;
   padding: .2rem 1rem;
 }
-.acerca-de .acerca-de_container-text .acerca-de_text .container-buttons .button:nth-child(2){
+/* .acerca-de .acerca-de_container-text .acerca-de_text .container-buttons .button:nth-child(2){
   display: none;
-} 
+}  */
 .acerca-de .acerca-de_container-text .acerca-de_text{
   width: 50%;
   opacity: 0;
   transform: translateX(-100%);
+}
+.acerca-de .acerca-de_container-text .acerca-de_text h3{
+  font-size: 1.5rem;
+  margin: 2rem 0 1rem 0;
 }
 /**  ANIMACION DEL TEXTO DE LA SECCION ACERCA DE MI   *****************************/
 .acerca-de .acerca-de_container-text .acerca-de_text.active{
