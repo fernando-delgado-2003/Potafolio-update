@@ -1,28 +1,33 @@
 const d = document;
+
 let header = d.querySelector("header");
 let windowHeight = window.innerHeight / 3;
 let SectionSkill = d.querySelector("#skills").getBoundingClientRect().top;
 let aboutMe = d.querySelector("#aboutMe").getBoundingClientRect().top;
-const menu = d.querySelector(".menu-hamburger");
 let links = d.querySelectorAll("nav a");
-const closeAndHamburger = menu.querySelectorAll("i");
+
+const menu = d.querySelector(".menu-hamburger");
+const closedAndHamburger = menu.querySelectorAll("i");
 /**
  * Menu
  */
 menu.addEventListener("click", ()=>{
     const nav = d.querySelector("nav");
     nav.classList.toggle("active");
-    closeAndHamburger.forEach((item)=>{
-      item.classList.toggle("active")
+    closedAndHamburger.forEach((item)=>{
+      item.classList.toggle("active");
     })
     links.forEach((link)=>{
       link.addEventListener("click", ()=>{
-        nav.classList.remove("active")
-
-    closeAndHamburger.forEach((item)=>{
-
-      item.classList.toggle("active")
-    })
+        let closed=menu.querySelector(".fa-times");
+        let hamburger=menu.querySelector(".fa-bars");
+        
+        nav.classList.remove("active");
+        /**
+         * icono hamburger y x
+         */
+        closed.classList.add("active");
+        hamburger.classList.remove("active");
       })
     })
 })
