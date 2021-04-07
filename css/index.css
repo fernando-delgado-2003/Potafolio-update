@@ -119,23 +119,14 @@ header .menu-hamburger {
   flex-direction: column;
   cursor: pointer;
   overflow: hidden;
-}
-header .menu-hamburger .line-menu{
-  width: 100%;
-  height: 3px;
-  background-color: #fff;
 
 }
-header .menu-hamburger .line1.active{
-
+header .menu-hamburger i{
+  font-size: 1.4rem;
 }
-header .menu-hamburger .line2.active{
-  transform: translateX(-30px);
+header .menu-hamburger i.active{
+  display: none;
 }
-header .menu-hamburger .line3.active{
-
-}
-
 header nav.active {
   left: 30%;
 }

@@ -16,6 +16,8 @@
 @media (max-width: 870px){
     header .menu-hamburger{
         display: flex;
+        justify-content: center;
+        align-items: center;
     }
     header nav {
         position: fixed;

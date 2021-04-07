@@ -4,13 +4,17 @@ let windowHeight = window.innerHeight / 3;
 let SectionSkill = d.querySelector("#skills").getBoundingClientRect().top;
 let aboutMe = d.querySelector("#aboutMe").getBoundingClientRect().top;
 const menu = d.querySelector(".menu-hamburger");
-let links = d.querySelectorAll("nav a")
+let links = d.querySelectorAll("nav a");
+const closeAndHamburger = menu.querySelectorAll("i");
 /**
  * Menu
  */
 menu.addEventListener("click", ()=>{
     const nav = d.querySelector("nav");
-    nav.classList.toggle("active")
+    nav.classList.toggle("active");
+    closeAndHamburger.forEach((item)=>{
+      item.classList.toggle("active")
+    })
     links.forEach((link)=>{
       link.addEventListener("click", ()=>{
         nav.classList.remove("active")
