@@ -20,7 +20,10 @@ menu.addEventListener("click", ()=>{
         nav.classList.remove("active")
 
     closeAndHamburger.forEach((item)=>{
+if(item.classList.contains("active")){
+
       item.classList.remove("active")
+}
     })
       })
     })
