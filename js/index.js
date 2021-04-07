@@ -18,6 +18,10 @@ menu.addEventListener("click", ()=>{
     links.forEach((link)=>{
       link.addEventListener("click", ()=>{
         nav.classList.remove("active")
+
+    closeAndHamburger.forEach((item)=>{
+      item.classList.toggle("active")
+    })
       })
     })
 })
