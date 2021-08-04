@@ -1,15 +1,15 @@
-.container-skills .skill .bounce-title{
+.container-skills .skill .bounce-y{
     opacity: 1;
-    animation: bounce-title 1s ease-out;
+    animation: bounce-y 1s ease-out;
     transform: translateY(0);
 }
-.container-skills .skill .bounce-text{
+.container-skills .skill .bounce-x{
     opacity: 1;
-    animation: bounce-text 1s ease-out;
+    animation: bounce-x 1s ease-out;
     transform: translateX(0);
 }
 
-@keyframes bounce-title {
+@keyframes bounce-y {
     0%{
         transform: translateY(-100%);
     }
@@ -20,7 +20,7 @@
         transform: translateY(0px);
     }
 }
-@keyframes bounce-text {
+@keyframes bounce-x {
     0%{
         transform: translateX(-100%);
     }
