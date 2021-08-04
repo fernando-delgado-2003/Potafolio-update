@@ -6,10 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="/css/loader-animation.css">
-  <link rel="stylesheet" href="/css/index.css" />
-  <link rel="stylesheet" href="/css/responsive.css">
-
+  <link rel="stylesheet" href="css/loader-animation.css">
+  <link rel="stylesheet" href="css/index.css" />
+  <link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="css/animation-skill.css" />
   <title>Portafolio - Fernando Delgado</title>
 </head>
 
@@ -56,13 +56,14 @@
         </ul>
       </nav>
     </header>
+    
     <div class="hero">
       <div class="text-hero">
         <p class="title-hero">!Hola, bienvenid@¡</p>
         <p>Me llamo Fernando soy desarrollador font end jr</p>
         <div class="container-buttons">
           <div>
-            <a href="#about-me" class="">Sobre mi</a>
+            <a href="#aboutMe" class="">Sobre mi</a>
           </div>
           <div>
             <a href="#portfolio" class="">Portafolio</a>
@@ -81,67 +82,89 @@
           <span class="skill-logo">
             <i class="bx bxl-html5"></i>
           </span>
-          <h3>Hyper Text Markup Language(HTML)</h3>
-          <p>
-            Tengo 1 año y medio de experiencia y proyectos 100% hechos en HTML
-          </p>
-          <div class="container-skill-level">
-            <div class="skill-level skill-level-html"></div>
-            <div class="level-percentage level-percentage-html">60%</div>
+          <div class="title">
+                 <h3>Hyper Text Markup Language(HTML)</h3>     
           </div>
+          <div class="description">
+          <p >
+            Tengo 1 año y medio de experiencia y proyectos 100% hechos en HTML
+          </p>             
+          </div>
+          <!--<div class="container-skill-level">-->
+          <!--  <div class="skill-level skill-level-html"></div>-->
+          <!--  <div class="level-percentage level-percentage-html">60%</div>-->
+          <!--</div>-->
         </div>
         <div class="skill">
           <span class="skill-logo">
             <i class="bx bxl-css3"></i>
           </span>
-          <h3>Cascading Style Sheets(CSS)</h3>
+          <div class="title">
+          <h3>Cascading Style Sheets(CSS)</h3>             
+          </div>
+          <div class="description">
           <p>
             Tengo 1 año y medio de experiencia y proyectos 100% hechos en CSS
-          </p>
-          <div class="container-skill-level">
-            <div class="skill-level skill-level-css"></div>
-            <div class="level-percentage level-percentage-css">60%</div>
+          </p>             
           </div>
+          <!--<div class="container-skill-level">-->
+          <!--  <div class="skill-level skill-level-css"></div>-->
+          <!--  <div class="level-percentage level-percentage-css">60%</div>-->
+          <!--</div>-->
         </div>
         <div class="skill">
           <span class="skill-logo">
             <i class="bx bxl-javascript"></i>
           </span>
-          <h3>javaScript(JS)</h3>
-          <p>Tengo 1 año de experiencia y proyectos 100% hechos en JS</p>
-          <div class="container-skill-level">
-            <div class="skill-level skill-level-javascript"></div>
-            <div class="level-percentage level-percentage-javascript">
-              55%
-            </div>
+          <div class="title">
+          <h3>javaScript(JS)</h3>             
           </div>
+          <div class="description">
+          <p>Tengo 1 año de experiencia y proyectos 100% hechos en 
+          </p>             
+          </div>
+          <!--<div class="container-skill-level">-->
+          <!--  <div class="skill-level skill-level-javascript"></div>-->
+          <!--  <div class="level-percentage level-percentage-javascript">-->
+          <!--    55%-->
+          <!--  </div>-->
+          <!--</div>-->
         </div>
         <div class="skill">
           <span class="skill-logo">
-            <img loading="lazy" src="/img/js_webpack-icon.svg" alt="" />
+            <img loading="lazy" src="img/js_webpack-icon.svg" alt="" />
           </span>
-          <h3>Webpack</h3>
+          <div class="title">
+          <h3>Webpack</h3>             
+          </div>
+          <div class="description">
           <p>
             Tengo conocimientos en webpack a un nivel básico, lo utilice en un
             solo proyectó
-          </p>
-          <div class="container-skill-level">
-            <div class="skill-level skill-level-webpack"></div>
-            <div class="level-percentage level-percentage-webpack">40%</div>
+          </p>             
           </div>
+          <!--<div class="container-skill-level">-->
+          <!--  <div class="skill-level skill-level-webpack"></div>-->
+          <!--  <div class="level-percentage level-percentage-webpack">40%</div>-->
+          <!--</div>-->
         </div>
         <div class="skill">
           <span class="skill-logo">
             <i class="bx bxl-wordpress"></i>
           </span>
-          <h3>Wordpress</h3>
-          <p>
-            Wordpress lo eh utilizado para hacer landing pages "informativas"
-          </p>
-          <div class="container-skill-level">
-            <div class="skill-level skill-level-wordpress"></div>
-            <div class="level-percentage level-percentage-wordpress">45%</div>
+          <div class="title">
+          <h3>Wordpress</h3>             
           </div>
+          <div class="description">
+           <p>
+            Wordpress lo eh utilizado para hacer landing pages "informativas"
+          </p>            
+          </div>
+
+          <!--<div class="container-skill-level">-->
+          <!--  <div class="skill-level skill-level-wordpress"></div>-->
+          <!--  <div class="level-percentage level-percentage-wordpress">45%</div>-->
+          <!--</div>-->
         </div>
       </section>
       <section class="portfolio" id="portfolio">
@@ -150,7 +173,7 @@
           <div class="item">
             <p>El pocito</p>
             <div class="cont-img">
-              <img src="/img/el-pocito.jpg" alt="" />
+              <img src="img/el-pocito.jpg" alt="" />
             </div>
             <div class="description">
               <p>Elaborado con:</p>
@@ -169,7 +192,7 @@
           <div class="item">
             <p>Landing page</p>
             <div class="cont-img">
-              <img src="/img/landing-page.png" alt="" />
+              <img src="img/landing-page.png" alt="" />
             </div>
             <div class="description">
               <p>Elaborado con:</p>
@@ -188,7 +211,7 @@
           <div class="item">
             <p>My galery</p>
             <div class="cont-img">
-              <img src="/img/my-galery.png" alt="" />
+              <img src="img/my-galery.png" alt="" />
             </div>
             <div class="description">
               <p>Elaborado con:</p>
@@ -206,7 +229,7 @@
           <div class="item">
             <p>Weather app</p>
             <div class="cont-img">
-              <img src="/img/weaher-app.png" alt="" />
+              <img src="img/weaher-app.png" alt="" />
             </div>
             <div class="description">
               <p>Elaborado con:</p>
@@ -303,8 +326,11 @@
     </main>
   </div>
   <script src="https://kit.fontawesome.com/a35662e283.js" crossorigin="anonymous"></script>
-  <script src="/js/loader-animation.js"></script>
-  <script src="/js/index.js"></script>
+  <script src="js/loader-animation.js"></script>
+  <script src="js/animation-skill.js">
+      
+  </script>
+  <script src="js/index.js"></script>
 
 </body>
 
