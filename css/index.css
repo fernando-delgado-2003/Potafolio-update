@@ -290,6 +290,7 @@ header nav ul li:hover::before {
 
 .container-skills {
     padding: 3.5rem;
+    
 }
 
 .container-skills>h2 {
@@ -302,6 +303,9 @@ header nav ul li:hover::before {
     position: relative;
     margin-bottom: 1rem;
     overflow: hidden;
+    width: calc(100% /  - 40px);
+    margin: 0 20px;
+   
 }
 
 /**  LOGOS DE LAS SKILLS  *****************************/
@@ -316,6 +320,7 @@ header nav ul li:hover::before {
     position: absolute;
     top: 0;
     left: 0;
+    opacity: 0;
 }
 
 .container-skills .skill .skill-logo i {
