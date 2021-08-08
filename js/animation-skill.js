@@ -1,3 +1,5 @@
+
+
 const titles = document.getElementsByClassName("title");
 const descriptions = document.getElementsByClassName("description");
 const logos = document.getElementsByClassName("skill-logo");
