@@ -10,10 +10,6 @@ const theme = {
            ["--color-circle-skill", "#dddbdb3d"],
            ["--color-text-skill", "rgba(255, 255, 255, 0.69)"],
            ["--color-text-about", "#fff"]
-
-
-
-
         ],
     light: [
             ["--img-hero", " url(../img/hero-theme-light.jpg)"],
@@ -26,13 +22,9 @@ const theme = {
             ["--color-circle-skill", "#F0F0F4"],
             ["--color-text-skill", "#636472"],
             ["--color-text-about", "#636472"]
-
-
-
-
         ]
 };
-const btnTheme = document.querySelector(".theme");
+const btnTheme = d.querySelector(".theme");
 
 btnTheme.addEventListener("click", (e) => {
     let themeApplied = e.target.value == undefined ? e.target.parentNode.value : e.target.value;
@@ -44,11 +36,26 @@ btnTheme.addEventListener("click", (e) => {
 
 
     for (let i = 0; i < theme[newtheme].length; i++) {
-        document.documentElement.style.setProperty(`${theme[newtheme][i][0]}`, `${theme[newtheme][i][1]}`);
+        d.documentElement.style.setProperty(`${theme[newtheme][i][0]}`, `${theme[newtheme][i][1]}`);
         btnTheme.innerHTML = newTextBtn;
         btnTheme.value = newtheme;
     }
-
+    localStorage.setItem("theme", newtheme)
 
 
 })
+
+d.addEventListener("DOMContentLoaded", (e) => {
+
+    if (localStorage.getItem("theme") === null) {
+        localStorage.setItem("theme", "dark");
+    }
+       let newtheme = localStorage.getItem("theme");
+btnTheme.value= newtheme;
+
+    localStorage.getItem("theme", btnTheme.value);
+    for (let i = 0; i < theme[newtheme].length; i++) {
+        d.documentElement.style.setProperty(`${theme[newtheme][i][0]}`, `${theme[newtheme][i][1]}`);
+    }
+
+});
