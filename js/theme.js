@@ -45,6 +45,7 @@ btnTheme.addEventListener("click", (e) => {
 
 })
 
+
 d.addEventListener("DOMContentLoaded", (e) => {
 
     if (localStorage.getItem("theme") === null) {
@@ -52,6 +53,8 @@ d.addEventListener("DOMContentLoaded", (e) => {
     }
        let newtheme = localStorage.getItem("theme");
 btnTheme.value= newtheme;
+btnTheme.innerHTML=  `  <i class='bx bx-${theme == "dark" ? "moon": "sun"}' ></i>
+   Cambiar al tema ${newtheme=="dark"? "light" : "dark" }`;
 
     localStorage.getItem("theme", btnTheme.value);
     for (let i = 0; i < theme[newtheme].length; i++) {
