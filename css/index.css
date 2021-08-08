@@ -2,7 +2,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap");
 
 :root {
-    --global-color-red: #de3315;
+    --color-theme: #000 ;
+    --color-text-general: #fff ;
+    --text-shadow-hero: 1px 1px 3px #454545;
+    --color-header: #131413;
+    --color-principal: #de3315;
+    --img-hero: url(../img/hero-theme-dark.jpg);
+       --color-menu: #fff;
+    --color-circle-skill: #dddbdb3d;
+    --color-text-skill: rgba(255, 255, 255, 0.69);
+   --color-text-about: #fff;
+   /**variables estaticas*/
+    --color-btn-border:#F4F4F4;
 }
 
 * {
@@ -22,11 +33,27 @@ html {
 
 body {
     font-family: "Quicksand", sans-serif;
-    background-color: #000;
-    color: #fff;
+    background-color: var(--color-theme);
+    color: var(--color-text-general);    
     font-weight: 700;
 }
-
+.theme{
+    position: fixed;
+    bottom: 2rem;
+    left: 2rem;
+    opacity: .5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: #fff;
+    z-index: 10;
+}
+.theme i{
+    margin-right: .6rem;
+}
 .container {
     overflow: hidden;
 }
@@ -43,56 +70,41 @@ body {
     font-size: 2rem;
 }
 
-.container-buttons a {
-    position: relative;
-    color: #fff;
-    font-size: 2rem;
-
-}
-
-.container-buttons a span {
-    position: absolute;
-    width: 0px;
-    height: 0px;
-    background: #fff;
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-    animation: animate-btn-hero800ms linear infinite;
-}
 
 .button {
     position: relative;
-    display: inline-block;
-    transition: all 500ms linear;
-    border: 1px solid rgb(218, 220, 224, 0.5);
-    border-radius: 0.3rem;
+    padding: .2rem 1.5rem ;
+    border-radius: .3rem;
+    border: 1px solid  var(--color-btn-border);
+    transition: border 400ms;
 }
 
 .button::before {
-    position: absolute;
     content: " ";
-    top: 0;
-    left: 0;
-    width: 0%;
-    height: 100%;
-    background-color: var(--global-color-red);
-    transition: all 500ms linear;
-    z-index: -1;
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    width: 0;
+        height: calc(100% + 2px);
+    
+    background-color: var(--color-principal);
+    border-radius: .3rem;
+    transition:width 500ms;
 }
 
 .button:hover::before {
-    width: 100%;
+    
+        width:calc(100% + 2px);
 }
 
 .button:hover {
-    border: 1px solid var(--global-color-red);
+    border: 1px solid  var(--color-principal);
+    
 }
 
 .button a {
-    display: block;
-    height: 100%;
-    width: 100%;
-    padding: 0 1.5rem;
+    position: relative;
+    z-index: 2;
 }
 
 /**
@@ -114,10 +126,13 @@ header {
 }
 
 header.active {
-    height: 3.5rem;
-    background-color: #000;
+    height: 4rem;
+    background-color: var(--color-header);
+    
 }
-
+header.active .button a{
+    color: var(--color-btn-border);
+}
 header a {
     color: #fff;
     font-size: 1.1rem;
@@ -136,11 +151,20 @@ header .menu-hamburger {
     flex-direction: column;
     cursor: pointer;
     overflow: hidden;
+    position: absolute;
+    top: calc(6rem / 2 - .8rem);
+    right: calc(5% + .8rem);
+    z-index: 22;
+        transition: top 500ms;
 
 }
+header.active .menu-hamburger{
 
+    top: calc(4rem / 2 - .8rem);
+}
 header .menu-hamburger i {
     font-size: 1.6rem;
+    color: var(--color-menu);
 }
 
 header .menu-hamburger i.active {
@@ -149,10 +173,13 @@ header .menu-hamburger i.active {
 
 header nav.active {
     left: 30%;
+       z-index: 20;
+
 }
 
-header nav {
+header nav{
     width: 40%;
+
 }
 
 header nav ul {
@@ -164,7 +191,10 @@ header nav ul {
 header nav ul li {
     position: relative;
 }
+header nav ul li a{
+        color: var(--color-menu);
 
+}
 header nav ul li::before {
     position: absolute;
     content: " ";
@@ -172,7 +202,7 @@ header nav ul li::before {
     left: 5%;
     width: 0%;
     height: 2px;
-    background-color: var(--global-color-red);
+    background-color: var(--color-principal);
     transition: all 400ms linear;
 }
 
@@ -188,15 +218,20 @@ header nav ul li:hover::before {
     justify-content: center;
     /* justify-content: space-between; */
     padding: 0 5%;
-    background-image: url(../img/hero.jpg);
+    background-image: var(--img-hero);
     background-size: cover;
     background-repeat: none;
     background-position: center;
+   transition: background 1s
 }
 
 .hero .text-hero {
     width: 50%;
     text-align: center;
+    color: #fff;
+    font-weight: 500;
+    text-shadow: var(--text-shadow-hero);
+    
 }
 
 .hero .text-hero p:nth-child(2) {
@@ -206,6 +241,7 @@ header nav ul li:hover::before {
 
 .hero .text-hero .title-hero {
     font-size: 3rem;
+    font-weight: 600;
 }
 
 .hero .text-hero .container-buttons {
@@ -215,58 +251,24 @@ header nav ul li:hover::before {
 }
 
 .hero .text-hero .container-buttons div {
-    position: relative;
-    transition: all 500ms linear;
-    border-radius: .2rem;
+    padding: .4rem 1.5rem
 }
 
 .hero .text-hero .container-buttons div:nth-child(1) {
-    margin-right: 2rem;
+    margin-right: 1rem;
 }
 
-.hero .text-hero .container-buttons div::before {
-    position: absolute;
-    content: " ";
-    top: -4px;
-    left: 0;
-    width: 0%;
-    height: 127%;
-    background-color: #fff;
-    transition: all 500ms linear;
-    border-radius: .2rem;
-}
 
-.hero .text-hero .container-buttons div:hover::before {
-    width: 100%;
-}
 
 .hero .text-hero .container-buttons div a {
-    border: 1px solid rgb(218, 220, 224, 0.8);
+    font-weight: 500;
     color: #fff;
-    padding: .2rem 1rem;
-    border-radius: 0.2rem;
-    position: relative;
-    overflow: hidden;
-    font-size: 1.3rem;
 }
 
 .hero .text-hero .container-buttons div:hover a {
-    color: #000;
+    color: #fff
 }
 
-@keyframes animate-btn-hero {
-    from {
-        width: 0px;
-        height: 0px;
-        opacity: 0.5;
-    }
-
-    to {
-        width: 200px;
-        height: 200px;
-        opacity: 0;
-    }
-}
 
 .bx {
     font-size: 2rem;
@@ -315,7 +317,7 @@ header nav ul li:hover::before {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #dddbdb3d;
+    background-color: var(--color-circle-skill);
     border-radius: 50%;
     position: absolute;
     top: 0;
@@ -355,7 +357,7 @@ header nav ul li:hover::before {
 
 .container-skills .skill .description p {
     font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.69);
+    color: var(--color-text-skill);
     margin-bottom: 1.7rem;
 
 }
@@ -574,7 +576,7 @@ header nav ul li:hover::before {
 
 .portfolio .container .item:hover .description {
 
-    bottom: 0;
+    bottom: -10px;
 }
 
 .portfolio .container .item .description>.text {
@@ -605,8 +607,10 @@ header nav ul li:hover::before {
 }
 
 .portfolio .container .item .description>div a {
-    padding: 0 1rem;
+   
     color: #000;
+    font-weight: 500;
+    font-size: 1rem;
 }
 
 .portfolio .container .item .description>div::before {
@@ -614,7 +618,7 @@ header nav ul li:hover::before {
 }
 
 .portfolio .container .item .description>div:hover {
-    border-color: var(--global-color-red);
+    border-color: var(--color-theme);
 }
 
 .portfolio .container .item .description>div:hover a {
@@ -632,7 +636,7 @@ header nav ul li:hover::before {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: #fff;
+    color: var(--color-theme);
     overflow: hidden;
 }
 
@@ -643,6 +647,9 @@ header nav ul li:hover::before {
 .acerca-de .acerca-de_container-text .acerca-de_text .container-buttons .button a {
     font-size: 1.5rem;
     padding: .2rem 1rem;
+    color: #fff;
+    text-align: center;
+    display: block;
 }
 
 /* .acerca-de .acerca-de_container-text .acerca-de_text .container-buttons .button:nth-child(2){
@@ -652,6 +659,8 @@ header nav ul li:hover::before {
     width: 50%;
     opacity: 0;
     transform: translateX(-100%);
+        color: var(--color-text-general);
+
 }
 
 .acerca-de .acerca-de_container-text .acerca-de_text h3 {
@@ -714,7 +723,7 @@ header nav ul li:hover::before {
 }
 
 .contact .container .element a {
-    color: #fff;
+    color: var(--color-text-general);
 }
 
 /* If you are looking to convert your PSD, PNG , JPG or PDF file  */
