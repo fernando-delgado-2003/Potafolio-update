@@ -1,343 +1,210 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="css/loader-animation.css">
-  <link rel="stylesheet" href="css/index.css" />
-  <link rel="stylesheet" href="css/responsive.css">
-<link rel="stylesheet" href="css/animation-skill.css" />
-  <title>Portafolio - Fernando Delgado</title>
+				<meta charset="UTF-8">
+				<meta name="viewport" content="width=device-width, initial-scale=1.0">
+				<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+				<link rel="stylesheet" href="css/normalize.css"></link>
+			<!-- 	<link rel="stylesheet" href="css/loader.css"></link> -->
+				<link rel="stylesheet" href="css/main.css"></link>
+				<link rel="stylesheet" href="css/responsive.css"></link>
+				<title>Potafolio - Fernando Delgado Bravo</title>
 </head>
-
 <body>
-  <div class="container">
-    <button type="button" class="theme" value="dark">
-       <!-- <i class='bx bx-moon'></i> -->
-        <i class='bx bx-sun' ></i>
-        Cambiar al modo light
-    </button>
+				<div class="wrap">
+								<!-- 
+								<div class="wrap-loader">
+												<div class="loader">
+																
+												</div>
+												<div class="text-loader">
+																Cargando
+																<span class="circle"></span>
+																<span class="circle"></span>
+																<span class="circle"></span>
+												</div>
+								</div>								
+								 -->
 
+						<header>
+										<a href="index.html" class="btn">
+														<span class="text">FDB</span>
+										</a>
+										<div class="btn-menu">
+												<i class='bx bx-menu'></i>		
+										</div>
+										<nav>
+														
+														<ul>
+																		<li><a href="#home">Inicio</a></li>
+																		<li><a href="#skills">Skills</a></li>
+																		<li><a href="#portfolio">Portafolio</a></li>
+																		<li><a href="#about">Acerca de</a></li>
+																		<li><a href="#contact">Contacto</a></li>
+														</ul>
+										</nav>
+						</header>		
+						<main>
+										<section id="home" class="hero">
+														
+																		<div class="hero-text">
+																						<p class="welcome">																																																		
+																										Hola, me llamo
+																						</p>
+																						<p class="name">
+																										Fernando Delgado
+																						</p>
+																						<p class="pre-description">
+																								Desarrollador front end
+																						</p>
+																						<div>
+																						<div class="btn">
+																										<a href="#portfolio" class="text">Portafolio</a>
+																						</div>
+																						<div class="btn">
+																										<a href="#contact" class="text">Contacto</a>
+																						</div>
+																						</div>
+																		</div>
+														
+										</section>
+										<section id="skills" class="skills">
+														<h4 class="title-section">Skills</h4>
+														
+																		
+														<div class="wrap-skills">
+																		<div class="skill">
+																						<span class="skill-logo">
+                        				<i class="bx bxl-html5"></i>
+                    				</span>
+                    				<div class="title">
+                        				<h3>Hyper Text Markup Language(HTML)</h3>
+                    				</div>
+                    				<div class="description">
+                        				<p>
+                            				Tengo 1 año y medio de experiencia y proyectos 100% hechos en HTML
+                        				</p>
+                    				</div>
+																		</div>
+																		<div class="skill">
+																						<span class="skill-logo">
+                        				<i class="bx bxl-css3"></i>
+                    				</span>
+                    				<div class="title">
+                        				<h3>Cascading Style Sheets(CSS)</h3>
+                    				</div>
+                    				<div class="description">
+                        				<p>
+                            				Tengo 1 año y medio de experiencia y proyectos 100% hechos en CSS
+                        				</p>
+                    				</div>
+																		</div>
+																		<div class="skill">
+																						<span class="skill-logo">
+                        				<i class="bx bxl-javascript"></i>
+                    				</span>
+                    				<div class="title">
+                        				<h3>Javascript(JS)</h3>
+                    				</div>
+                    				<div class="description">
+                        				<p>
+                            				Tengo 1 año y medio de experiencia y proyectos 100% hechos en JS
+                        				</p>
+                    				</div>
+																		</div>
+																		<div class="skill">
+																						<span class="skill-logo">
+                        				 <img loading="lazy" src="img/js_webpack-icon.svg" alt="" />
+                    				</span>
+                    				<div class="title">
+                        				<h3>Webpack</h3>
+                    				</div>
+                    				<div class="description">
+                        				<p>
+                            				 Tengo conocimientos en webpack a un nivel básico, lo utilice en un solo proyectó
+                        				</p>
+                    				</div>
+																		</div>
+																		<div class="skill">
+																						<span class="skill-logo">
+                        				<i class="bx bxl-wordpress"></i>
+                    				</span>
+                    				<div class="title">
+                        				<h3>Wordpress</h3>
+                    				</div>
+                    				<div class="description">
+                        				<p>
+                            				Wordpress lo eh utilizado para hacer landing pages "informativas"
+                        				</p>
+                    				</div>
+																		</div>
+														
+														</div>		
+								
+										</section>
+										<section id="portfolio" class="portfolio">
+														<form class="search">
+																		<h4 class="title-section">Portafolio</h4>
+																		<select class="select">																						                            <option value="default">Seleccione una categoria</option>
+   																				<option value="default">Seleccione una categoria</option>
+                       <option value="components">"Componentes"</option>
+                       <option value="landing page">landing page</option>
+                       <option value="website">pagina web</option>
+																		</select>
+														</form>
+														<div class="wrap-cards">
+																		
+														</div>
+										</section>
+										<section id="about" class="about">
+												<div>
+																<h4 class="title-section">Acerca de mí</h4>
+																    <p>
+                        Me presento me llamo Fernando soy de México, nací y vivo en Cancún, Quintana Roo.
+                        Llevó poco más de 1 año y medio de estudios de forma autodidacta
+                        para ser un buen desarrollador Front-end.
+                        Soy un apasionado de las tecnologias webs y la web en general y lo que más me gusta de esto
+                        que siempre al algo nuevo que aprender.
+                    </p>
+                    <h3>
+                        Experiencia laboral
+                    </h3>
+                    <p>
+                        Estuve como Becario en una empresa de marketing en Cancún, en donde mi principal labor era hacer pequeños cambios en las plantillas de Wordpress ya sea desde el responsive, HTML, CSS o traducciones.
+                    </p>
+												</div>		
+												<div>
+															 <img loading="lazy" src="./img/undraw_web_developer_p3e5.svg" alt="">
+												</div>
+										</section>
+										<section id="contact" class="contact">
+														<h4 class="title-section">Contacto</h4>
+														<ul>
+																		<li>
+																						<a href="tel:9982184312">
+																										<i class='bx bxs-phone'></i>		
+																						</a>
+																		</li>
+																		<li>
+																						<a href="mailto:fernanbravo124@gmail.com">
+																										 <i class='bx bx-mail-send'></i>
+																						</a>
+																		</li>
+																		<li>
+																						<a href="https://www.linkedin.com/in/fernando-delgado-bravo-2bb0a51b0/" target="_BLANCK">
+																										<i class='bx bxl-linkedin-square'></i>
 
-    <div class="container-loader" id="containerLoader">
-      <div class="left"></div>
-      <div class="right"></div>
-      <div class="text-1">Fernando <span>Delgado Bravo</span>
-        <div class="text-2">Fernando <span>Delgado Bravo</span></div>
-      </div>
-      <div class="line"></div>
-    </div>
-
-
-    <header>
-      <div class="button">
-        <a href="/" class="name">FDB</a>
-      </div>
-      <div class="menu-hamburger">
-        <i class="fas fa-bars"></i>
-        <i class="fas fa-times active"></i>
-      </div>
-      <nav class="">
-        <ul>
-          <li>
-            <a href="#">Inicio</a>
-          </li>
-          <li>
-            <a href="#skills">Skils</a>
-          </li>
-          <li>
-            <a href="#portfolio">Portafolio</a>
-          </li>
-
-          <li>
-            <a href="#aboutMe">Acerca de</a>
-          </li>
-          <li>
-            <a href="#contact">Contacto</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-    
-    <div class="hero">
-      <div class="text-hero">
-        <p class="title-hero">Hola, bienvenido</p>
-        <p>Me llamo Fernando soy desarrollador font end</p>
-        <div class="container-buttons">
-          <div class="button">
-            <a href="#aboutMe" class="">Sobre mi</a>
-          </div>
-          <div class="button">
-            <a href="#portfolio" class="">Portafolio</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- <div class="img-hero">
-        <img src="/img/undraw_heatmap_uyye.svg" alt="" />
-      </div> -->
-    </div>
-    <main>
-      <section id="skills" class="container-skills">
-        <h2 class="title-section">Skills</h2>
-        
-            
-        <div class="skill">
-          <span class="skill-logo">
-            <i class="bx bxl-html5"></i>
-          </span>
-          <div class="title">
-                 <h3>Hyper Text Markup Language(HTML)</h3>     
-          </div>
-          <div class="description">
-          <p >
-            Tengo 1 año y medio de experiencia y proyectos 100% hechos en HTML
-          </p>             
-          </div>
-          <!--<div class="container-skill-level">-->
-          <!--  <div class="skill-level skill-level-html"></div>-->
-          <!--  <div class="level-percentage level-percentage-html">60%</div>-->
-          <!--</div>-->
-        </div>
-        <div class="skill">
-          <span class="skill-logo">
-            <i class="bx bxl-css3"></i>
-          </span>
-          <div class="title">
-          <h3>Cascading Style Sheets(CSS)</h3>             
-          </div>
-          <div class="description">
-          <p>
-            Tengo 1 año y medio de experiencia y proyectos 100% hechos en CSS
-          </p>             
-          </div>
-          <!--<div class="container-skill-level">-->
-          <!--  <div class="skill-level skill-level-css"></div>-->
-          <!--  <div class="level-percentage level-percentage-css">60%</div>-->
-          <!--</div>-->
-        </div>
-        <div class="skill">
-          <span class="skill-logo">
-            <i class="bx bxl-javascript"></i>
-          </span>
-          <div class="title">
-          <h3>javaScript(JS)</h3>             
-          </div>
-          <div class="description">
-          <p>Tengo 1 año de experiencia y proyectos 100% hechos en 
-          </p>             
-          </div>
-          <!--<div class="container-skill-level">-->
-          <!--  <div class="skill-level skill-level-javascript"></div>-->
-          <!--  <div class="level-percentage level-percentage-javascript">-->
-          <!--    55%-->
-          <!--  </div>-->
-          <!--</div>-->
-        </div>
-        <div class="skill">
-          <span class="skill-logo">
-            <img loading="lazy" src="img/js_webpack-icon.svg" alt="" />
-          </span>
-          <div class="title">
-          <h3>Webpack</h3>             
-          </div>
-          <div class="description">
-          <p>
-            Tengo conocimientos en webpack a un nivel básico, lo utilice en un
-            solo proyectó
-          </p>             
-          </div>
-          <!--<div class="container-skill-level">-->
-          <!--  <div class="skill-level skill-level-webpack"></div>-->
-          <!--  <div class="level-percentage level-percentage-webpack">40%</div>-->
-          <!--</div>-->
-        </div>
-        <div class="skill">
-          <span class="skill-logo">
-            <i class="bx bxl-wordpress"></i>
-          </span>
-          <div class="title">
-          <h3>Wordpress</h3>             
-          </div>
-          <div class="description">
-           <p>
-            Wordpress lo eh utilizado para hacer landing pages "informativas"
-          </p>            
-          </div>
-        </div>
-
-          <!--<div class="container-skill-level">-->
-          <!--  <div class="skill-level skill-level-wordpress"></div>-->
-          <!--  <div class="level-percentage level-percentage-wordpress">45%</div>-->
-          <!--</div>-->
-       
-      </section>
-      <section class="portfolio" id="portfolio">
-        <h2 class="title-section">Portafolio</h2>
-        <div class="container">
-          <div class="item">
-            <p>El pocito</p>
-            <div class="cont-img">
-              <img src="img/el-pocito.jpg" alt="" />
-            </div>
-            <div class="description">
-              <p>Elaborado con:</p>
-              <ul>
-                <li><i class="bx bxl-html5"></i>HTML</li>
-                <li><i class="bx bxl-css3"></i>CSS</li>
-                <li><i class="bx bxl-javascript"></i>JAVASCRIPT</li>
-              </ul>
-              <p class="text">El pocito es un demo que hice para un restaurante. </p>
-              <div class="button">
-                <a href="https://elpocito.netlify.app/" target="_blank">Ver demo</a>
-              </div>
-
-            </div>
-          </div>
-          <div class="item">
-            <p>Landing page</p>
-            <div class="cont-img">
-              <img src="img/landing-page.png" alt="" />
-            </div>
-            <div class="description">
-              <p>Elaborado con:</p>
-              <ul>
-                <li><i class="bx bxl-html5"></i>HTML</li>
-                <li><i class="bx bxl-css3"></i>CSS</li>
-                <li><i class="bx bxl-javascript"></i>JAVASCRIPT</li>
-              </ul>
-              <p class="text">INSURE es un la landing page </p>
-              <div class="button">
-                <a href="https://landing-page-fernando.netlify.app/" target="_blank">Ver demo</a>
-              </div>
-
-            </div>
-          </div>
-          <div class="item">
-            <p>My galery</p>
-            <div class="cont-img">
-              <img src="img/my-galery.png" alt="" />
-            </div>
-            <div class="description">
-              <p>Elaborado con:</p>
-              <ul>
-                <li><i class="bx bxl-html5"></i>HTML</li>
-                <li><i class="bx bxl-css3"></i>CSS</li>
-              </ul>
-              <p class="text">My gallery es una pequeña galería estática </p>
-              <div class="button">
-                <a href="https://my-gallery-fernando-delgado.netlify.app/" target="_blank">Ver demo</a>
-              </div>
-
-            </div>
-          </div>
-          <div class="item">
-            <p>Weather app</p>
-            <div class="cont-img">
-              <img src="img/weaher-app.png" alt="" />
-            </div>
-            <div class="description">
-              <p>Elaborado con:</p>
-              <ul>
-                <li><i class="bx bxl-html5"></i>HTML</li>
-                <li><i class="bx bxl-css3"></i>CSS</li>
-                <li><i class="bx bxl-javascript"></i>JAVASCRIPT</li>
-              </ul>
-              <p class="text">App del clima es una página web donde puedes consultar el clima de tu país, los datos
-                mostrados vienen de la API de openWeatherMap. </p>
-              <div class="button">
-                <a href="https://weather-clima2.000webhostapp.com/" target="_blank">Ver demo</a>
-              </div>
-
-            </div>
-          </div>
-          <div class="item">
-            <p>Windbnb</p>
-            <div class="cont-img">
-              <img src="/img/windbnb.png" alt="" />
-            </div>
-            <div class="description">
-              <p>Elaborado con:</p>
-              <ul>
-                <li><i class="bx bxl-html5"></i>HTML</li>
-                <li><i class="bx bxl-css3"></i>CSS</li>
-                <li><i class="bx bxl-javascript"></i>JAVASCRIPT</li>
-
-              </ul>
-              <p class="text">Windbnb es un pequeño clon de Airbnb </p>
-              <div class="button">
-                <a href="https://windbnb-fernando-delgado.netlify.app/" target="_blank">Ver demo</a>
-              </div>
-
-            </div>
-          </div>
-        </div>
-      </section>
-      <section id="aboutMe" class="acerca-de">
-        <div class="acerca-de_heading">
-          <h2 class="title-section">¿Quien soy?</h2>
-        </div>
-        <div class="acerca-de_container-text">
-          <div class="acerca-de_text">
-            <h3>Acerca de mi</h3>
-            <p>
-              Me presento me llamo Fernando soy de México, nací y vivo en Cancún, Quintana Roo.
-              Actualmente tengo 17 años llevó poco más de 1 año y medio de estudios de forma autodidacta
-              para ser un buen desarrollador Front-end.
-              Soy un apasionado de las tecnologias webs y la web en general y lo que más me gusta de esto
-              que siempre al algo nuevo que aprender.
-            </p>
-            <h3>
-              Experiencia laboral
-            </h3>
-            <p>
-              Estuve como Becario en una empresa de marketing en Cancún, en donde mi principal labor era hacer pequeños cambios en las plantillas de Wordpress ya sea desde el responsive, HTML, CSS o traducciones.
-            </p>
-            <br>
-            <q>Nunca paraces de aprender</q>
-            <div class="container-buttons">
-              <div class="button">
-                <a href="./download/Cv_front_end.docx" download="cv-fernando.docx"
-                  class="animation-btn">Descargar CV</a>
-              </div>
-            </div>
-
-          </div>
-
-          <div class="acerca-de_img">
-            <img loading="lazy" src="./img/undraw_web_developer_p3e5.svg" alt="">
-          </div>
-
-        </div>
-      </section>
-      <section id="contact" class="contact">
-        <h2 class="title-section">Contacto</h2>
-
-        <div class="container">
-          <div class="element">
-            <i class='bx bxs-phone'></i>
-            <a href="tel:529982184312">+52 (998) 218 4312</a>
-          </div>
-          <div class="element">
-            <i class='bx bx-mail-send'></i>
-            <a href="mailto:fernanbravo124@gmail.com ">fernanbravo124@gmail.com</a>
-          </div>
-          <div class="element">
-            <i class='bx bxl-linkedin-square'></i>
-            <a href="https://www.linkedin.com/in/fernando-delgado-bravo-2bb0a51b0/" ctarget="_BLANCK"> Linkedin</a>
-          </div>
-        </div>
-      </section>
-    </main>
-  </div>
-  <script src="https://kit.fontawesome.com/a35662e283.js" crossorigin="anonymous"></script>
-  <script src="js/loader-animation.js"></script>
-  <script src="js/animation-skill.js"></script>
-  <script src="js/index.js"></script>
-  <script src="js/theme.js" type="text/javascript" charset="utf-8"></script>
+																						</a>
+																		</li>
+														</ul>
+										</section>
+						</main>
+				</div>
+				<!-- 
+				<script src="js/loader.js"></script>
+				 -->
+				
+				<script src="js/portfolio.js"></script>
+				<script src="js/main.js"></script>
 </body>
-
 </html>
