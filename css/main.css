@@ -1,0 +1,498 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+:root{
+				--header-weight: 4rem;
+				--color-body: #0A0A0B;
+				--color-primary: #B71C1C;
+				--size-loader: 350px;
+				--color-secundary: #fff;				
+				--timing-transition: 600ms;
+				--space-sections: 1rem;
+				--width-sections: 90%;
+				--img-hero: url(../img/hero-theme-dark.jpg);
+}
+/*Estilos compartidos*/
+*{
+				box-sizing: border-box;
+}
+html{
+				scroll-behavior: smooth;
+}
+[id]{
+				scroll-margin-top: 3ex;
+}
+::before,::after{
+				padding: 0;
+				margin: 0;
+				box-sizing: border-box;
+}
+ul{
+				padding: 0;
+				
+}
+.btn{
+transition: border var(--timing-transition);
+				border: 1px solid var(--color-secundary);
+				padding: .5rem 1.5rem;
+				border-radius: .4rem;
+				position: relative;
+				outline: none;
+			
+}
+.btn .text{
+				text-decoration: none;
+				display: block;
+				position: relative;
+				z-index: 1;
+				color: #fff;
+				text-align: center;
+}
+.btn::before{
+				content: "";
+				position: absolute;
+				top: -1px;
+				left: -1px;
+				width: 0;
+				height: calc(100% + 2px);
+				background: var(--color-primary);
+				border-radius: .4rem;
+			transition: width var(--timing-transition);
+		
+}
+.btn:hover::before{
+width: calc(100% + 2px);
+}
+.btn:hover{
+				border-color: var(--color-primary);
+}
+section{
+	padding: var(--space-sections) 5%;
+
+}
+.title-section{
+				text-align: center;
+				font-size: 2rem;
+				font-weight: 800;
+}
+.bx {
+    font-size: 2rem;
+}
+
+.bxl-html5 {
+    color: #eb860e;
+}
+
+.bxl-css3 {
+    color: #2c99ef;
+}
+
+.bxl-javascript {
+    color: #dce215;
+}
+
+.bxl-wordpress {
+    color: #2c99ef;
+}
+img{
+				width: 100%;
+}
+
+/**/
+body{
+				color: var(--color-secundary);
+				background-color: var(--color-body);
+				font-family: 'Poppins', sans-serif;
+}
+
+
+/*
+				HEADER
+*/
+header{
+width: 100%;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding:0 5%;
+			height: 5rem;
+			position: fixed;
+			top: 0;
+			left: 0;
+			z-index: 10;		
+		transition-property: background-color, height;
+			transition: 500ms;
+}
+header.active{
+				height: 4rem;
+				background-color: var(--color-body); 
+}
+header .btn-menu{
+				display: none;
+}
+header a{
+text-decoration: none;
+				color: var(--color-secundary);
+				opacity: 0;
+				
+}
+header .btn{
+				animation: fadeDown 1.5s forwards;
+				animation-delay: 200ms;
+}
+header .btn .text{
+				font-size: 1.2rem;
+}
+header nav ul{
+				list-style: none;
+				display: flex;
+		align-items: center;
+}
+header nav ul li{
+opacity: 0;
+				margin-left: .8rem;
+}
+header nav ul li a{
+				position: relative;
+				opacity: 1;
+}
+header nav ul li a:before{
+				content: "";
+				position: absolute;
+				bottom: 0;
+				left: 10%;
+				width: 80%;
+				height: 2px;
+				background-color: var(--color-primary);
+				transform: scaleX(0);
+				transition: transform var(--timing-transition) linear;
+}
+header nav ul li a:hover::before{
+				transform: scaleX(1);
+}
+header nav ul li:nth-child(1){
+				animation: fadeDown 1.5s forwards;
+				animation-delay: 200ms;
+				
+}
+header nav ul li:nth-child(2){
+				animation: fadeDown 1.5s forwards;
+				animation-delay: 350ms;
+				
+}
+header nav ul li:nth-child(3){
+				animation: fadeDown 1.5s forwards;
+				animation-delay: 500ms;
+				
+}
+header nav ul li:nth-child(4){
+				animation: fadeDown 1.5s forwards;
+				animation-delay: 650ms;
+				
+}
+header nav ul li:nth-child(5){
+				animation: fadeDown 1.5s forwards;
+				animation-delay: 800ms;
+				
+}
+/*
+				INICIO
+*/
+.hero{
+				padding-top: 5rem;
+				background-image: var(--img-hero);
+				background-size: cover;
+				background-position: center;
+				height: 100vh;
+				display: flex;
+				align-items: center;
+}
+.hero .hero-text{
+				
+				display: inline-block;
+			 position: relative;
+			 padding-left: 2rem;
+			 font-weight: 700;
+			 max-width: 50%;
+			 overflow: hidden;
+}
+.hero .hero-text::before{
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 1.3px;
+				height: 100%;
+				background-color: var(--color-secundary);
+				animation: fadeUp 1s forwards;
+}
+.hero .hero-text > p{
+				margin: .7rem 0;
+				opacity: 0;
+}
+.hero .hero-text .welcome{
+				display: inline-block;
+				position: relative;
+		  color: #F2F3F4;
+		  animation: fadeDown 1.5s forwards;
+		  animation-delay: 200ms;
+		  font-size: 1.3rem;
+}
+/*
+.hero .hero-text .welcome::before{;
+				content: "";
+				width: 0;
+				height: 2px;
+				position: absolute;
+				bottom: -4px;
+				left: 0;
+				background-color: var(--color-secundary);
+				animation: animation-line var(--timing-transition) linear forwards;
+}
+*/
+.hero .hero-text .name{
+				font-weight: 700;
+				font-size: 2.5rem;
+				animation: fadeDown 1.5s forwards;
+		  animation-delay: 500ms;
+}
+.hero .hero-text .pre-description{
+				max-width:300px ;
+				animation: fadeDown 1.5s forwards;
+		  animation-delay: 700ms;
+		  font-size: 1.3rem;
+}
+.hero .hero-text > div{
+				display: flex;
+				margin: 1.5rem 0;
+				opacity: 0;
+				animation: fadeDown 1.5s forwards;
+				animation-delay: 1s;
+}
+.hero .hero-text > div .btn{
+				
+				margin-right: .8rem;
+}
+
+
+
+/*
+				Skills
+*/
+
+.wrap-skills{
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+				align-items: center;
+}
+.wrap-skills .skill{
+				max-width: 330px;
+				min-width: 200px;
+				position: relative;
+				padding-left: 3rem;
+				margin: 1rem;
+	
+				
+}
+.skill .skill-logo{
+				position: absolute;
+				top: 2.5rem;
+				left: 0;
+				width: 2.5rem;
+				height: 2.5rem;
+				background-color: #dddbdb3d;
+				border-radius: 50%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				font-size: 2rem;
+				opacity: 0;
+}
+.skill > div{
+				opacity: 0;
+}
+.skill .skill-logo img{
+				width: 2rem;
+}
+.skill .title h3{
+				font-weight: 600;
+				font-size: 1.5rem;
+				margin: 2rem 0 .5rem 0;
+}
+.skill .description p{
+				font-size: 1rem;
+				font-weight: 400;
+				margin: .5rem 0;
+				color: rgba(255,255,255,.7);
+}
+/*
+				Portafolio
+*/
+.portfolio .search .select{
+				max-width: 320px;
+				width: 100%;
+				margin: 0 auto 2rem auto;
+				display: block;
+				padding: .7rem ;
+				border-radius: .4rem;
+				outline: none;
+				background-color: #fff ;
+}
+.portfolio .wrap-cards{
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+}
+.portfolio .wrap-cards .card{
+				min-width: 200px;
+				max-width: 330px;
+				height: 400px;
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-end;
+				border-radius: .4rem;
+				background-size: cover;
+				background-position: center;
+				position: relative;
+				margin: 1rem;
+				overflow: hidden;
+}
+.portfolio .wrap-cards .card h4{
+				font-size: 1.5rem;
+				text-transform: uppercase;
+				margin: 0 0 .6rem 0;
+				position: relative;
+}
+.portfolio .wrap-cards .card h4::before{
+				content: "";
+				position: absolute;
+				bottom: -5px;
+				left: 0;
+				width: 100%;
+				height: 3px;
+				transition: transform 800ms linear;
+				background-color: var(--color-primary);
+				transform: scaleX(0);
+				transform-origin: left;
+}
+.portfolio .wrap-cards .card::before{
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background-color: rgba(0,0,0,.25);
+}
+.portfolio .wrap-cards .card > div{
+				z-index: 5;
+				padding: 1.5rem;
+				
+				background-image: linear-gradient(0deg, rgba(0,0,0,.6), transparent);			
+			transform: translateY(55%);
+			transition: transform 800ms;
+}
+
+.portfolio .wrap-cards .card .btns{
+				display: flex;
+}
+
+.portfolio .wrap-cards .card .btns .btn{
+				margin-right: 1rem;
+}
+.card .data{
+				opacity: 0;
+}
+.card .data p{
+			max-height: 50px;
+}
+.portfolio .wrap-cards .card .btns .btn .text{
+				font-size: .8rem;
+}
+
+/*
+				efectos hover de portafolio
+*/
+.portfolio .wrap-cards .card:hover h4::before{
+			transform: scaleX(1);
+}
+.portfolio .wrap-cards .card:hover .data p{
+transition: all 1.5s;
+				max-height: 300px;
+}
+.portfolio .wrap-cards .card:hover > div{
+				transform: translateY(0);
+}
+.portfolio .wrap-cards .card:hover .data{
+				animation: fadeUp 1.5s forwards;
+}
+
+
+/*
+				ACERCA DE 
+*/
+.about {
+				display: flex;
+				flex-wrap: wrap;
+				align-items: center;
+			justify-content: center;
+}
+.about > div{
+				width: calc(50% - 4rem);
+				padding: 0 1rem;
+				opacity: 0;
+}
+
+/*
+				CONTACTO
+*/
+
+.contact ul{
+				list-style: none;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+}
+.contact ul li{
+				margin-right: 1rem;
+}
+.contact ul li a{
+				color: #fff;
+}
+
+@keyframes fadeUp {
+				from{
+								transform: translateY(3rem);
+				}
+				to{
+				opacity: 1;
+								transform: translateY(0);
+				}
+}
+@keyframes fadeDown {
+				from{
+								transform: translateY(-3rem);
+				}
+				to{
+								opacity: 1;
+								transform: translateY(0);
+				}
+}
+@keyframes fadeLeft {
+    from{
+    				transform: translateX(-3rem);
+    }
+    to{
+    opacity: 1;
+    				transform: translateX(0);
+    }
+}
+@keyframes fadeRight {
+    from{
+    opacity: 0;
+    				transform: translateX(3rem);
+    }
+    to{
+    opacity: 1;
+    				transform: translateX(0);
+    }
+}
