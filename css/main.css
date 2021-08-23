@@ -72,6 +72,7 @@ section{
 				text-align: center;
 				font-size: 2rem;
 				font-weight: 800;
+				margin: 1.25rem 0;
 }
 .bx {
     font-size: 2rem;
@@ -253,6 +254,7 @@ header nav ul li:nth-child(5){
 				font-size: 2.5rem;
 				animation: fadeDown 1.5s forwards;
 		  animation-delay: 500ms;
+		  margin: .5rem 0;
 }
 .hero .hero-text .pre-description{
 				max-width:300px ;
@@ -289,13 +291,11 @@ header nav ul li:nth-child(5){
 				min-width: 200px;
 				position: relative;
 				padding-left: 3rem;
-				margin: 1rem;
-	
-				
+				margin: 0 1rem 1rem 1rem;		
 }
 .skill .skill-logo{
 				position: absolute;
-				top: 2.5rem;
+				top: 1rem;
 				left: 0;
 				width: 2.5rem;
 				height: 2.5rem;
@@ -316,7 +316,7 @@ header nav ul li:nth-child(5){
 .skill .title h3{
 				font-weight: 600;
 				font-size: 1.5rem;
-				margin: 2rem 0 .5rem 0;
+				margin: .5rem 0;
 }
 .skill .description p{
 				font-size: 1rem;
