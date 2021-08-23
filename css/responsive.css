@@ -1,0 +1,100 @@
+@media (max-width: 805px){
+				header .btn-menu{
+								position: absolute;
+								top: 1.5rem;
+								right: 5%;
+								display: block;
+								animation: fadeDown 1.5s forwards;
+								z-index: 10;
+								transition: top 500ms linear;
+				}
+				header.active .btn-menu{
+								top: 1rem;
+				}
+				nav{
+								position: fixed;
+								top: 0;
+								right: 0;
+								width: 70%;
+								height: calc(100vh + 1rem);
+								opacity: 0;				
+								background-color: var(--color-body);								
+								transition: all 1000ms;
+								transform: translateX(100%);
+				}
+				nav.active{
+								opacity: 1;
+								transform: translateX(0);
+				}
+				nav ul{
+								flex-direction: column;
+								justify-content: space-around;
+								align-items: center;
+								height: 100%;
+								
+				}
+				nav ul li{
+								margin: 0;
+				}
+				nav ul li a{
+								font-weight: 700;
+								font-size: 2rem;
+				}
+				.hero .hero-text{
+								max-width: 65%;
+				}
+				.wrap-skills .skill,
+				.portfolio .wrap-cards .card{
+								max-width: 280px;
+				}
+				
+}
+@media (max-width: 790px){
+				.about > div:first-child{
+								width: 65%;
+				}
+				.about > div:last-child{
+								width: 30%;
+				}
+}
+@media(max-width: 694px){
+				
+				.wrap-skills .skill,
+				.portfolio .wrap-cards .card{
+								max-width: 350px;
+								width: 75%;
+				}
+				#about > div{
+								width: 100%;
+				}
+}
+@media(max-width: 523px){
+				.hero .hero-text{
+								max-width: 100%;
+				}
+				.wrap-skills .skill,
+				.portfolio .wrap-cards .card{
+								max-width: 400px;
+								width: 86%;
+				}
+}
+@media(max-width: 342px){
+			header 	nav ul li a{
+								font-size: 1.3rem;
+				}
+				.hero .hero-text .welcome,
+		 	.hero .hero-text .pre-description{
+								font-size: 1.1rem;
+				}
+				.hero .hero-text .name{
+								font-size: 2rem;
+				}
+				.hero .hero-text > div{
+								display: inline-flex;
+								flex-direction: column;
+							
+				}
+				.hero .hero-text > div .btn{
+								margin-bottom: 1rem;
+				}
+}
