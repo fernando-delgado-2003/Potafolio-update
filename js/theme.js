@@ -32,10 +32,10 @@ window.addEventListener("DOMContentLoaded", () => {
     if (localStorage.getItem("theme") == null) {
         localStorage.setItem("theme", "dark");
     }
-    if (localStorage.getItem("theme") != btnTheme.value) {
+    
         let newTheme = btnTheme.value == "dark" ? "light" : "dark"
         chageVariablesCss(newTheme)
-    }
+    
 
 })
 
