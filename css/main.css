@@ -2,15 +2,15 @@
 
 :root {
     --header-weight: 4rem;
-    --color-body: #0A0A0B;
-    --color-primary: #B71C1C;
+    --color-body: ;
+    --color-primary: ;
     --size-loader: 350px;
     --color-secundary: #fff;
     --timing-transition: 600ms;
     --space-sections: 1rem;
     --width-sections: 90%;
-    --color-shadow-card: rgba(0, 0, 0, .8);
-    --img-hero: url(../img/hero-theme-dark.jpg);
+    --color-shadow-card: ;
+    --img-hero: ;
 }
 
 /*Estilos compartidos*/
