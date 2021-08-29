@@ -33,9 +33,21 @@ window.addEventListener("DOMContentLoaded", () => {
         localStorage.setItem("theme", "dark");
     }
     
+    if (localStorage.getItem("theme") != btnTheme.value) {
+
         let newTheme = btnTheme.value == "dark" ? "light" : "dark"
+
         chageVariablesCss(newTheme)
-    
+
+    }else{
+
+        theme["dark"].forEach((elem) => {
+
+            document.documentElement.style.setProperty(elem[0], elem[1])
+
+        })
+
+    }
 
 })
 
