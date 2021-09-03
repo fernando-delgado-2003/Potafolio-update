@@ -66,10 +66,10 @@ function handleCards(cards) {
 						<p>${elem.text}</p>
 						<div class="btns">
 						    <div class="btn">
-							    <a href=${elem.link} class="text">Ver demo</a>
+							    <a href=${elem.link} target="_blank" class="text">Ver demo</a>
 						    </div>
 						    <div class="btn">
-							    <a href="${elem.github}" class="text">Ver código</a>
+							    <a href="${elem.github}" target="_blank" class="text">Ver código</a>
 							</div>
 						</div>
 						</div>
