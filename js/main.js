@@ -69,7 +69,7 @@ function handleCards(cards) {
 							    <a href=${elem.link} class="text">Ver demo</a>
 						    </div>
 						    <div class="btn">
-							    <a href="" class="text">Ver código</a>
+							    <a href="${elem.github}" class="text">Ver código</a>
 							</div>
 						</div>
 						</div>
