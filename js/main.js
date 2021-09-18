@@ -17,7 +17,6 @@ const containerSkills = selectElement(".skills"),
         btnMenu.innerHTML = `<i class="bx ${nav.classList.contains('active') ? 'bx-x' : 'bx-menu'}"></i>`
     });
 
-
 /***   
 
 **/

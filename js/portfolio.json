@@ -33,7 +33,7 @@
     },
   {
     "name": "Weather App",
-    "img": "img/weaher-app.png",
+    "img": "img/weather-app.jpg",
     "link": "https://weather-app-fernan.netlify.app/",
     "text": "App del clima es una página web donde puedes consultar el clima de tu país, los datos mostrados vienen de la API de openWeatherMap",
     "technologies": ["HTML", "CSS", "JAVASCRIPT"],
