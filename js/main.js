@@ -1,51 +1,51 @@
 const containerSkills = selectElement(".skills"),
-    skills = selectElements(".skill"),
-    titles = selectElements(".title"),
-    descriptions = selectElements(".description"),
-    logos = selectElements(".skill-logo"),
-    header = selectElement("header"),
-    btnMenu = selectElement(".btn-menu"),
-    nav = selectElement("nav"),
-    sectionsAbout = selectElements(".about > div");
+	skills = selectElements(".skill"),
+	titles = selectElements(".title"),
+	descriptions = selectElements(".description"),
+	logos = selectElements(".skill-logo"),
+	header = selectElement("header"),
+	btnMenu = selectElement(".btn-menu"),
+	nav = selectElement("nav"),
+	sectionsAbout = selectElements(".about > div");
 
-    /*
-    				Menu
-    */
+/*
+				Menu
+*/
 
-    btnMenu.addEventListener("click", () => {
-        nav.classList.toggle("active");
-        btnMenu.innerHTML = `<i class="bx ${nav.classList.contains('active') ? 'bx-x' : 'bx-menu'}"></i>`
-    });
+btnMenu.addEventListener("click", () => {
+	nav.classList.toggle("active");
+	btnMenu.innerHTML = `<i class="bx ${nav.classList.contains('active') ? 'bx-x' : 'bx-menu'}"></i>`
+});
 
 /***   
 
 **/
 window.addEventListener("scroll", () => {
-    if (nav.classList.contains("active")) {
-        nav.classList.remove("active");
-        btnMenu.innerHTML = "<i class='bx bx-menu'></i>		"
-    }
-    if (window.scrollY > 0) {
-        header.classList.add("active")
-    } else {
-        header.classList.remove("active")
-    }
-    let windowHeight = window.innerHeight / 1.22;
+	if (nav.classList.contains("active")) {
+		nav.classList.remove("active");
+		btnMenu.innerHTML = "<i class='bx bx-menu'></i>		"
+	}
+	if (window.scrollY > 0) {
+		header.classList.add("active")
+	} else {
+		header.classList.remove("active")
+	}
+	let windowHeight = window.innerHeight / 1.22;
 
-    for (let i = 0; i < skills.length; i++) {
-        if (skills[i].getBoundingClientRect().top < windowHeight) {
-            logos[i].style.animation = "fadeDown 1.2s forwards";
-            titles[i].style.animation = "fadeDown 1.2s forwards";
-            descriptions[i].style.animation = "fadeLeft 800ms forwards"
-            descriptions[i].style.animationDelay = "500ms"
-        }
+	for (let i = 0; i < skills.length; i++) {
+		if (skills[i].getBoundingClientRect().top < windowHeight) {
+			logos[i].style.animation = "fadeDown 1.2s forwards";
+			titles[i].style.animation = "fadeDown 1.2s forwards";
+			descriptions[i].style.animation = "fadeLeft 800ms forwards"
+			descriptions[i].style.animationDelay = "500ms"
+		}
 
-    }
-    sectionsAbout.forEach((elem) => {
-        if (elem.getBoundingClientRect().top < windowHeight) {
-            elem.style.animation = "fadeUp 1s forwards";
-        }
-    })
+	}
+	sectionsAbout.forEach((elem) => {
+		if (elem.getBoundingClientRect().top < windowHeight) {
+			elem.style.animation = "fadeUp 1s forwards";
+		}
+	})
 })
 
 /*
@@ -53,16 +53,26 @@ window.addEventListener("scroll", () => {
 */
 
 function handleCards(cards) {
-    let wrapCards = selectElement(".wrap-cards"),
-        templeteCards = "";
-
-    cards.forEach((elem) => {
-        templeteCards += `
+	let wrapCards = selectElement(".wrap-cards"),
+		templeteCards = "";
+	cards.forEach((elem) => {
+		let templateIcons = ""
+		elem.icons.forEach((icon) => {
+			templateIcons += `
+					<li> 							
+						<i class="${icon} "></i>
+					</li>
+					`;
+		})
+		templeteCards += `
 				<div class="card" style="background-image:url(${elem.img}); opacity: 0;">
 				    <div>
 						<h4>${elem.name}</h4>		
 						<div class="data">
 						<p>${elem.text}</p>
+						<ul>
+							${templateIcons}
+						</ul>
 						<div class="btns">
 						    <div class="btn">
 							    <a href=${elem.link} target="_blank" class="text">Ver demo</a>
@@ -76,12 +86,12 @@ function handleCards(cards) {
 				</div>			
 				`;
 
-    })
-    wrapCards.innerHTML = templeteCards;
-    selectElements(".wrap-cards .card").forEach((elem, i) => {
-        elem.style.animation = "fadeUp 1.5s forwards";
-        elem.style.animationDelay = `${250*i}ms`;
-    })
+	})
+	wrapCards.innerHTML = templeteCards;
+	selectElements(".wrap-cards .card").forEach((elem, i) => {
+		elem.style.animation = "fadeUp 1.5s forwards";
+		elem.style.animationDelay = `${250*i}ms`;
+	})
 }
 
 
@@ -90,32 +100,34 @@ function handleCards(cards) {
 */
 
 function handleFilterPortfolio(data) {
-    let select = selectElement("select");
+	let select = selectElement("select");
 
-    select.addEventListener("change", (e) => {
-        let search = e.target.value;
-        if (search != "default") {
+	select.addEventListener("change", (e) => {
+		let search = e.target.value;
+		if (search != "default") {
+			let dataFilter;
 
-
-            data.forEach((elem, i) => {
-                dataFilter = data.filter(elem => elem.category == search);
-            })
-            handleCards(dataFilter)
-        } else {
-            handleCards(data)
-        }
-    })
+			dataFilter = data.filter(elem => elem.category == search);
+			handleCards(dataFilter)
+		} else {
+			handleCards(data)
+		}
+	})
 
 }
 
 
 function handleFecthPortfolio() {
-    fetch("../js/portfolio.json")
-        .then(res => res.json())
-        .then(data => {
-            handleCards(data);
-            handleFilterPortfolio(data);
-        })
+	fetch("../js/portfolio.json")
+		.then(res => res.json())
+		.then(data => {
+			//let dataFilter;
+			//dataFilter = data.filter(elem => elem.top == true);
+			//handleCards(dataFilter);
+			handleCards(data)
+
+			handleFilterPortfolio(data);
+		})
 
 }
 handleFecthPortfolio()

@@ -522,8 +522,12 @@ header nav ul li:nth-child(5) {
     opacity: 0;
 }
 
+.card .data ul {
+	display: flex;
+	list-style: none;
+}
 .card .data p {
-    max-height: 50px;
+    max-height: 0;
 }
 
 .portfolio .wrap-cards .card .btns .btn .text {
