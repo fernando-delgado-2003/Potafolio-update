@@ -94,5 +94,16 @@
 		"category": "components",
 		"github": "https://github.com/fernando-delgado-2003/acordion",
 		"top": true
+	},
+	{
+		"name": "Tasty Food",
+		"img": "img/tasty_food.jpg",
+		"link": "https://acordion-fernando.netlify.app/",
+		"text": "Acordión para mostrar información",
+		"technologies": ["HTML", "CSS", "JAVASCRIPT"],
+		"icons": ["bx bxl-html5", "bx bxl-css3", "bx bxl-javascript"],
+		"category": "components",
+		"github": "https://github.com/fernando-delgado-2003/acordion",
+		"top": true
   }
 ]
