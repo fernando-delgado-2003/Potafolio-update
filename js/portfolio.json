@@ -2,7 +2,7 @@
 	{
 		"name": "El pocito",
 		"img": "img/el-pocito.jpg",
-		"link": "https://elpocito.netlify.app/",
+		"link": "https://restaurant-fdb.vercel.app/",
 		"text": "El pocito es un demo que hice para un restaurante",
 		"technologies": ["HTML", "CSS", "JAVASCRIPT"],
 		"icons": ["bx bxl-html5", "bx bxl-css3", "bx bxl-javascript"],
@@ -15,7 +15,7 @@
 	{
 		"name": "INSURE",
 		"img": "img/landing-page.png",
-		"link": "https://landing-page-fernando.netlify.app/",
+		"link": "https://insure-landing-page-fdb.vercel.app/",
 		"text": "INSURE es un la landing page",
 		"technologies": ["HTML", "CSS", "JAVASCRIPT"],
 		"icons": ["bx bxl-html5", "bx bxl-css3", "bx bxl-javascript"],
@@ -50,7 +50,7 @@
 	{
 		"name": "Windbnb",
 		"img": "img/windbnb.png",
-		"link": "https://windbnb-fernando-delgado.netlify.app/",
+		"link": "https://windbnb-fdb.vercel.app/",
 		"text": "Windbnb es un pequeño clon de Airbnb",
 		"technologies": ["HTML", "CSS", "JAVASCRIPT"],
 		"icons": ["bx bxl-html5", "bx bxl-css3", "bx bxl-javascript"],
@@ -87,7 +87,7 @@
 	{
 		"name": "Acordión",
 		"img": "img/acordion.jpg",
-		"link": "https://acordion-fernando.netlify.app/",
+		"link": "https://acordion.vercel.app/",
 		"text": "Acordión para mostrar información",
 		"technologies": ["HTML", "CSS", "JAVASCRIPT"],
 		"icons": ["bx bxl-html5", "bx bxl-css3", "bx bxl-javascript"],
@@ -98,7 +98,7 @@
 	{
 		"name": "Tasty Food",
 		"img": "img/tasty_food.jpg",
-		"link": "https://tasty-food-fernando.netlify.app/",
+		"link": "https://tasty-food-fdb.vercel.app/",
 		"text": "Landing page ideal para una tienda de comida",
 		"technologies": ["HTML", "CSS", "JAVASCRIPT"],
 		"icons": ["bx bxl-html5", "bx bxl-css3", "bx bxl-javascript"],
