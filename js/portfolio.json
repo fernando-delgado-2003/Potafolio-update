@@ -1,29 +1,5 @@
 [
 	{
-		"name": "El pocito",
-		"img": "img/el-pocito.jpg",
-		"link": "https://restaurant-fdb.vercel.app/",
-		"text": "El pocito es un demo que hice para un restaurante",
-		"technologies": ["HTML", "CSS", "JAVASCRIPT"],
-		"icons": ["bx bxl-html5", "bx bxl-css3", "bx bxl-javascript"],
-		"category": "landing page",
-		"github": "https://github.com/fernando-delgado-2003/restaurant",
-		"top": false
-
-
-  },
-	{
-		"name": "INSURE",
-		"img": "img/landing-page.png",
-		"link": "https://insure-landing-page-fdb.vercel.app/",
-		"text": "INSURE es un la landing page",
-		"technologies": ["HTML", "CSS", "JAVASCRIPT"],
-		"icons": ["bx bxl-html5", "bx bxl-css3", "bx bxl-javascript"],
-		"category": "landing page",
-		"github": "https://github.com/fernando-delgado-2003/Front-end-mentor--insure-landing-page-master",
-		"top": true
-    },
-	{
 		"name": "My gallery",
 		"img": "img/my-galery.png",
 		"link": "https://my-first-galery.vercel.app/",
@@ -95,6 +71,19 @@
 		"github": "https://github.com/fernando-delgado-2003/acordion",
 		"top": true
 	},
+		{
+		  "name": "El pocito",
+		  "img": "img/el-pocito.jpg",
+		  "link": "https://restaurant-fdb.vercel.app/",
+		  "text": "El pocito es un demo que hice para un restaurante",
+		  "technologies": ["HTML", "CSS", "JAVASCRIPT"],
+		  "icons": ["bx bxl-html5", "bx bxl-css3", "bx bxl-javascript"],
+		  "category": "landing page",
+		  "github": "https://github.com/fernando-delgado-2003/restaurant",
+		  "top": false
+	
+	
+		},
 	{
 		"name": "Tasty Food",
 		"img": "img/tasty_food.jpg",
