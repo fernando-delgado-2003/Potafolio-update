@@ -511,13 +511,16 @@ header nav ul li:nth-child(5) {
 }
 
 .portfolio .wrap-cards .card .btns {
-    display: flex;
+    display: inline-flex;
 }
 
 .portfolio .wrap-cards .card .btns .btn {
     margin-right: 1rem;
 }
 
+.portfolio .wrap-cards .card .btns .btn a{
+  padding: .7rem 1rem;
+}
 .card .data {
     opacity: 0;
 }

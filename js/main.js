@@ -56,13 +56,16 @@ function handleCards(cards) {
 	let wrapCards = selectElement(".wrap-cards"),
 		templeteCards = "";
 	cards.forEach((elem) => {
-		let templateIcons = ""
+		let templateIcons = "";
 		elem.icons.forEach((icon) => {
+		  		console.log(icon)
+      if(icon != "wordpress "){
 			templateIcons += `
 					<li> 							
 						<i class="${icon} "></i>
 					</li>
 					`;
+      }
 		})
 		templeteCards += `
 				<div class="card" style="background-image:url(${elem.img}); opacity: 0;">
@@ -77,10 +80,16 @@ function handleCards(cards) {
 						    <div class="btn">
 							    <a href=${elem.link} target="_blank" class="text">Ver demo</a>
 						    </div>
-						    <div class="btn">
+						    ${elem.github != "" 
+						    ? `
+										    <div class="btn">
 							    <a href="${elem.github}" target="_blank" class="text">Ver código</a>
 							</div>
-						</div>
+	    `
+						    :
+						    ""
+						    }
+							</div>
 						</div>
 					</div>
 				</div>			
