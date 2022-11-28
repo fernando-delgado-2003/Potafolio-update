@@ -58,7 +58,6 @@ function handleCards(cards) {
 	cards.forEach((elem) => {
 		let templateIcons = "";
 		elem.icons.forEach((icon) => {
-		  		console.log(icon)
       if(icon != "wordpress "){
 			templateIcons += `
 					<li> 							
