@@ -35,6 +35,18 @@
 		"top": false
 
     },
+    	{
+		"name": "Terapeuta",
+		"img": "img/web-terapias-heolisticas.jpg",
+		"link": "https://terapeutaholistica4u.com/",
+		"text": "Proyecto principalmente para dar a conocer los servicios dados por el emprendedor",
+		"technologies": ["HTML", "CSS", "JAVASCRIPT"],
+		"icons": ["bx bxl-html5", "bx bxl-css3", "bx bxl-javascript"],
+		"category": "website",
+		"github": "",
+		"top": true
+    },
+
 	{
 		"name": "Formulario de registo y login",
 		"img": "img/form-login-register.jpg",
