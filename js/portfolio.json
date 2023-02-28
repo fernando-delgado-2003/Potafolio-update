@@ -11,6 +11,18 @@
 		"top": false
 
     },
+    	{
+		"name": "Dr. Omar Lugo",
+		"img": "img/dr-omar-lugo.jpg",
+		"link": "https://demo-dr-omar.vercel.app/",
+		"text": "Landing page para cirujano. Diseño final, dominio provisional",
+		"technologies": ["HTML", "CSS", "JAVASCRIPT"],
+		"icons": ["bx bxl-html5", "bx bxl-css3", "bx bxl-javascript"],
+		"category": "landing page",
+		"github": "",
+		"top": true
+    },
+
 	{
 		"name": "Weather App",
 		"img": "img/weather-app.jpg",
